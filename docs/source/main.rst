@@ -1,5 +1,24 @@
-Usage
+Network Infrastructure
 =====
+DHCP
+DNS
+
+Server Infrastructure
+=====
+Proxmox
+
+Hardware
+=====
+
+Software
+=====
+
+About
+=====
+
+
+------------
+
 
 .. _installation:
 
