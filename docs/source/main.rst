@@ -12,7 +12,7 @@ Hardware
 
 Software
 =====
-aaa
+
 About
 =====
 
