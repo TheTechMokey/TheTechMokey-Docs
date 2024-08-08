@@ -10,6 +10,7 @@ ISC has announced the end of maintenance for ISC DHCP as of the end of 2022. ISC
 
 To install the DHCP server package, run:
 `sudo dnf install dhcp-server`
+
 Start and enable the DHCP server service:
 `sudo systemctl start dhcpd`
 `sudo systemctl enable dhcpd`
@@ -18,6 +19,7 @@ Start and enable the DHCP server service:
 
 Edit the DHCP configuration file:
 `sudo nano /etc/dhcp/dhcpd.conf`
+
 Add the following configuration:
 ```
 # Use the interim DDNS update style
