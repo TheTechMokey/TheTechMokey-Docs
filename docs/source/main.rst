@@ -12,7 +12,7 @@ Hardware
 
 Software
 =====
-
+aaa
 About
 =====
 
@@ -34,7 +34,7 @@ To use Lumache, first install it using pip:
 Creating recipes
 ----------------
 
-To retrieve a list of random ingredients,
+To retrieve a list of random ingredients, 
 you can use the ``lumache.get_random_ingredients()`` function:
 
 .. autofunction:: lumache.get_random_ingredients
