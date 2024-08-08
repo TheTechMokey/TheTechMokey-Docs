@@ -39,5 +39,8 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   Network Infrastructure
+   Server Infrastructure
+   Hardware
+   Software
+   About
