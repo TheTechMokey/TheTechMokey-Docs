@@ -62,9 +62,15 @@ A cool bit of code::
 
 .. toctree::
    :maxdepth: 10
-   
+
    Network Infrastructure
    Server Infrastructure
+      Proxmox
    Hardware
+      Beelink
+   Operating Systems
+      Fedora
    Software
+      Visual Studio Code
    About
+      About Mokey
