@@ -1,4 +1,4 @@
-Configuring DHCP and DNS Servers
+# H1 Configuring DHCP and DNS Servers
 
 Simple walk-through of configuring DHCP and DNS on the same server with Dynamic Updates for a local domain.
 Assumptions: Local Linux Server such as CentOS or Fedora Server configured and updated.
