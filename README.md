@@ -13,6 +13,7 @@ ISC has announced the end of maintenance for ISC DHCP as of the end of 2022. ISC
 
 ### Start and enable the DHCP server service:
 `sudo systemctl start dhcpd`
+
 `sudo systemctl enable dhcpd`
 
 ## 1.2 Configure `dhcpd.conf`
