@@ -3,7 +3,7 @@ Configuring DHCP and DNS Servers
 
 Simple walk-through of configuring DHCP and DNS on the same server with Dynamic Updates for a local domain.
 
-important:: Assumptions
+.. admonition:: Assumptions
 
 Assumptions: Local Linux Server such as CentOS or Fedora Server configured and updated.
 
@@ -13,7 +13,7 @@ Assumptions: Local Linux Server such as CentOS or Fedora Server configured and u
 1.1 Install ISC DHCP Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-warning:: Deprecation
+.. attention::
 
 ISC has announced the end of maintenance for ISC DHCP as of the end of 2022. ISC will continue providing professional support services for existing subscribers, but does not intend to issue any further maintenance releases. Please see Kea Documentation for ISC's replacement.
 
