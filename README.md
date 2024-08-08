@@ -208,34 +208,42 @@ Verify BIND is running and the configurations are correct:
 sudo systemctl status named
 Test DNS resolution:
 
-dig @192.168.1.254 example.YOURDOMAINNAME.lan
-3. Configure Webmin for GUI Management
-3.1 Install Webmin
-Create a repository file for Webmin:
+`dig @192.168.1.254 example.YOURDOMAINNAME.lan`
 
-sudo nano /etc/yum.repos.d/webmin.repo
-Add the following content:
+# 3. Configure Webmin for GUI Management
+## 3.1 Install Webmin
+### Create a repository file for Webmin:
 
+`sudo nano /etc/yum.repos.d/webmin.repo`
+
+### Add the following content:
+```
 [Webmin]
 name=Webmin Distribution
 baseurl=http://download.webmin.com/download/yum
 enabled=1
 gpgcheck=1
 gpgkey=http://www.webmin.com/jcameron-key.asc
-Install Webmin:
+```
 
-sudo dnf install webmin
+### Install Webmin:
+
+`sudo dnf install webmin`
+
 Start and enable the Webmin service:
-
+```
 sudo systemctl start webmin
 sudo systemctl enable webmin
-Access Webmin via your web browser:
+```
 
-Open `https://192.168.1.254:10000` and log in with your root or administrative user credentials. }
+### Access Webmin via your web browser:
 
-3.2 Configure Webmin for DHCP and DNS Management
-1. Log in to Webmin.
+### Open `https://192.168.1.254:10000` and log in with your root or administrative user credentials. }
 
-2. Navigate to the “Servers” section and select “BIND DNS Server” and “DHCP Server”.
+## 3.2 Configure Webmin for DHCP and DNS Management
 
-3. Configure DHCP and DNS settings as needed through the Webmin interface.
+### 1. Log in to Webmin.
+
+### 2. Navigate to the “Servers” section and select “BIND DNS Server” and “DHCP Server”.
+
+### 3. Configure DHCP and DNS settings as needed through the Webmin interface.
