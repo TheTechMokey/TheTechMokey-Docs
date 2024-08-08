@@ -89,7 +89,8 @@ host example-host {
 
 Add the following content, replacing the key secret:
 
-```key “rndc-key” {
+```
+key “rndc-key” {
     algorithm hmac-md5;
     secret “your-generated-key”;
 }
@@ -97,7 +98,8 @@ Add the following content, replacing the key secret:
 
 ### Ensure correct permissions:
 
-```sudo chown dhcp:dhcp /etc/dhcp/rndc.key
+```
+sudo chown dhcp:dhcp /etc/dhcp/rndc.key
 sudo chmod 600 /etc/dhcp/rndc.key
 ```
 
@@ -105,17 +107,22 @@ sudo chmod 600 /etc/dhcp/rndc.key
 ## 2.1 Install BIND DNS Server
 ###Install BIND server package:
 
-sudo dnf install bind bind-utils
+`sudo dnf install bind bind-utils`
+
 Start and enable the BIND service:
 
+```
 sudo systemctl start named
 sudo systemctl enable named
-2.2 Configure BIND
-Edit the BIND configuration file:
+```
 
-sudo nano /etc/named.conf
-Add the following configuration:
+## 2.2 Configure BIND
+### Edit the BIND configuration file:
 
+`sudo nano /etc/named.conf`
+
+### Add the following configuration:
+```
 options {
     listen-on port 53 { 192.168.1.254; };  # IP address of the DNS server
     listen-on-v6 { none; };  # Disable IPv6
@@ -191,9 +198,11 @@ zone "1.168.192.in-addr.arpa" IN {
     type master;
     file "/var/named/1.168.192.rev";
 };
+```
 Restart the BIND service to apply changes:
 
-sudo systemctl restart named
+`sudo systemctl restart named`
+
 Verify BIND is running and the configurations are correct:
 
 sudo systemctl status named
