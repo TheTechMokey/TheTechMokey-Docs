@@ -1,10 +1,19 @@
 The Tech Mokey's Documentation Site
 ===================================
 
+
+
+
+
+------------
+
+
+
+
 About
 =====
 
-Tbe Blurb
+The Blurb
 ---------
 Welcome to my corner of the digital world! With over 15 years of IT experience, I've journeyed from building my first computer at age 10 to leading network operations for major government projects. My expertise spans network architecture, cybersecurity, programming, and project management.
 
@@ -14,26 +23,6 @@ I started my programming journey with languages like C#, C++, and Java, creating
 
 This website centralizes my accumulated knowledge and experiences, offering valuable insights and resources for anyone navigating the dynamic IT landscape. Dive in and discover the wealth of information that can help you on your own tech journey!
 
-
-
-DHCP
-DNS
-
-Server Infrastructure
-=====
-Proxmox
-
-Hardware
-=====
-
-Software
-=====
-
-About
-=====
-
-
-------------
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
 that creates recipes mixing random ingredients.
@@ -78,12 +67,8 @@ A cool bit of code::
 
    Network Infrastructure
    Server Infrastructure
-      Proxmox
    Hardware
-      Beelink
    Operating Systems
-      Fedora
    Software
-      Visual Studio Code
    About
-      About Mokey
+
