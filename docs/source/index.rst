@@ -25,6 +25,7 @@ This website centralizes my accumulated knowledge and experiences, offering valu
 
 
 :doc:`ISC DHCP and DDNS <../isc_dhcp_ddns>`
+:doc:`Install zsh and Oh My Zsh <../zsh>`
 
 * this is an image
 
