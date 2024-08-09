@@ -1,4 +1,4 @@
-Install and Setup Fedora 40
+Install and Setup Fedora 40 Workstation
 ==================
 
 .. contents::
