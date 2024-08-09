@@ -1,13 +1,7 @@
-Network Infrastructure
+Hardware
 ======================
 
 Details about the network infrastructure setup.
-
-thing 1
----------
-
-thing 2
-======
 
 .. toctree::
    :maxdepth: 1

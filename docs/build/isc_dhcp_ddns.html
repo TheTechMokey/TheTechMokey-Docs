@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuring DHCP and DNS Servers &mdash; The Tech Mokey 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            The Tech Mokey
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Configuring DHCP and DNS Servers</a><ul>
+<li><a class="reference internal" href="#set-up-dhcp-server">1. Set Up DHCP Server</a><ul>
+<li><a class="reference internal" href="#install-isc-dhcp-server">1.1 Install ISC DHCP Server</a></li>
+<li><a class="reference internal" href="#configure-dhcpd-conf">1.2 Configure <cite>dhcpd.conf</cite></a></li>
+<li><a class="reference internal" href="#generate-or-configure-dns-update-key">1.3 Generate or Configure DNS Update Key</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#set-up-dns-server-bind">2. Set Up DNS Server (BIND)</a><ul>
+<li><a class="reference internal" href="#install-bind-dns-server">2.1 Install BIND DNS Server</a></li>
+<li><a class="reference internal" href="#configure-bind">2.2 Configure BIND</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configure-webmin-for-gui-management">3. Configure Webmin for GUI Management</a><ul>
+<li><a class="reference internal" href="#install-webmin">3.1 Install Webmin</a></li>
+<li><a class="reference internal" href="#configure-webmin-for-dhcp-and-dns-management">3.2 Configure Webmin for DHCP and DNS Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">The Tech Mokey</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Configuring DHCP and DNS Servers</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/isc_dhcp_ddns.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuring-dhcp-and-dns-servers">
+<h1>Configuring DHCP and DNS Servers<a class="headerlink" href="#configuring-dhcp-and-dns-servers" title="Link to this heading"></a></h1>
+<p>Simple walk-through of configuring DHCP and DNS on the same server with Dynamic Updates for a local domain.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><cite>Assumptions:</cite> Local Linux Server such as CentOS or Fedora Server configured and updated.</p>
+</div>
+<section id="set-up-dhcp-server">
+<h2>1. Set Up DHCP Server<a class="headerlink" href="#set-up-dhcp-server" title="Link to this heading"></a></h2>
+<section id="install-isc-dhcp-server">
+<h3>1.1 Install ISC DHCP Server<a class="headerlink" href="#install-isc-dhcp-server" title="Link to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>ISC has announced the end of maintenance for ISC DHCP as of the end of 2022. ISC will continue providing professional support services for existing subscribers, but does not intend to issue any further maintenance releases. Please see Kea Documentation for ISC’s replacement.</p>
+</div>
+<p>To install the DHCP server package, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">dhcp</span><span class="o">-</span><span class="n">server</span>
+</pre></div>
+</div>
+<p>Start and enable the DHCP server service:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">start</span> <span class="n">dhcpd</span>
+
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">dhcpd</span>
+</pre></div>
+</div>
+</section>
+<section id="configure-dhcpd-conf">
+<h3>1.2 Configure <cite>dhcpd.conf</cite><a class="headerlink" href="#configure-dhcpd-conf" title="Link to this heading"></a></h3>
+<p>Edit the DHCP configuration file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">dhcp</span><span class="o">/</span><span class="n">dhcpd</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p>Add the following configuration:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Use the interim DDNS update style
+ddns-update-style interim;
+
+# Ignore client updates; the server will handle updates itself
+ignore client-updates;
+
+# Define the key for authentication with the DNS server
+key “rndc-key” {
+    algorithm hmac-md5;
+    secret “your-rndc-key-secret”;  # Replace with your actual key secret
+};
+
+# Configure DNS zones for dynamic updates
+zone YOURDOMAINNAME.lan. {
+    primary 192.168.1.254;  # IP address of the DNS server
+    key “rndc-key”;
+}
+
+zone 1.168.192.in-addr.arpa. {
+    primary 192.168.1.254;  # IP address of the DNS server
+    key “rndc-key”;
+}
+
+# Define default and maximum lease times
+default-lease-time 600;
+max-lease-time 7200;
+
+# Specify the domain name and DNS servers for DHCP clients
+option domain-name “YOURDOMAINNAME.lan”;
+option domain-name-servers 192.168.1.254;  # IP address of the DNS server
+
+# Define a subnet configuration
+subnet 192.168.1.0 netmask 255.255.255.0 {
+    range 192.168.1.100 192.168.1.200;  # Range of IP addresses to assign
+    option routers 192.168.1.1;  # Default gateway
+    option domain-name-servers 192.168.1.254;  # DNS server IP
+    option domain-name “YOURDOMAINNAME.lan”;  # Domain name for the subnet
+    ddns-domainname “YOURDOMAINNAME.lan”;
+    ddns-rev-domainname “in-addr.arpa”;
+}
+
+# Example of a static IP assignment
+host example-host {
+    hardware ethernet 00:1A:2B:3C:4D:5E;  # MAC address of the client
+    fixed-address 192.168.1.50;  # Fixed IP address
+}
+</pre></div>
+</div>
+<p>Save and close the file.</p>
+<p>Restart the DHCP server to apply changes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">restart</span> <span class="n">dhcpd</span>
+</pre></div>
+</div>
+</section>
+<section id="generate-or-configure-dns-update-key">
+<h3>1.3 Generate or Configure DNS Update Key<a class="headerlink" href="#generate-or-configure-dns-update-key" title="Link to this heading"></a></h3>
+<p>Generate a key using OpenSSL (if not already done):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">rand</span> <span class="o">-</span><span class="n">base64</span> <span class="mi">32</span>
+</pre></div>
+</div>
+<p>Create or edit the key file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">dhcp</span><span class="o">/</span><span class="n">rndc</span><span class="o">.</span><span class="n">key</span>
+</pre></div>
+</div>
+<p>Add the following content, replacing the key secret:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>key “rndc-key” {
+    algorithm hmac-md5;
+    secret “your-generated-key”;
+}
+</pre></div>
+</div>
+<p>Ensure correct permissions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">chown</span> <span class="n">dhcp</span><span class="p">:</span><span class="n">dhcp</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">dhcp</span><span class="o">/</span><span class="n">rndc</span><span class="o">.</span><span class="n">key</span>
+<span class="n">sudo</span> <span class="n">chmod</span> <span class="mi">600</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">dhcp</span><span class="o">/</span><span class="n">rndc</span><span class="o">.</span><span class="n">key</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="set-up-dns-server-bind">
+<h2>2. Set Up DNS Server (BIND)<a class="headerlink" href="#set-up-dns-server-bind" title="Link to this heading"></a></h2>
+<section id="install-bind-dns-server">
+<h3>2.1 Install BIND DNS Server<a class="headerlink" href="#install-bind-dns-server" title="Link to this heading"></a></h3>
+<p>Install BIND server package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">bind</span> <span class="n">bind</span><span class="o">-</span><span class="n">utils</span>
+</pre></div>
+</div>
+<p>Start and enable the BIND service:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">start</span> <span class="n">named</span>
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">named</span>
+</pre></div>
+</div>
+</section>
+<section id="configure-bind">
+<h3>2.2 Configure BIND<a class="headerlink" href="#configure-bind" title="Link to this heading"></a></h3>
+<p>Edit the BIND configuration file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">named</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p>Add the following configuration:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">options</span> <span class="p">{</span>
+    <span class="n">listen</span><span class="o">-</span><span class="n">on</span> <span class="n">port</span> <span class="mi">53</span> <span class="p">{</span> <span class="mf">192.168.1.254</span><span class="p">;</span> <span class="p">};</span>  <span class="c1"># IP address of the DNS server</span>
+    <span class="n">listen</span><span class="o">-</span><span class="n">on</span><span class="o">-</span><span class="n">v6</span> <span class="p">{</span> <span class="n">none</span><span class="p">;</span> <span class="p">};</span>  <span class="c1"># Disable IPv6</span>
+    <span class="n">directory</span> <span class="s2">&quot;/var/named&quot;</span><span class="p">;</span>  <span class="c1"># Directory for zone files</span>
+    <span class="n">dump</span><span class="o">-</span><span class="n">file</span> <span class="s2">&quot;/var/named/data/cache_dump.db&quot;</span><span class="p">;</span>  <span class="c1"># Cache dump file</span>
+    <span class="n">statistics</span><span class="o">-</span><span class="n">file</span> <span class="s2">&quot;/var/named/data/named_stats.txt&quot;</span><span class="p">;</span>  <span class="c1"># Statistics file</span>
+    <span class="n">memstatistics</span><span class="o">-</span><span class="n">file</span> <span class="s2">&quot;/var/named/data/named_mem_stats.txt&quot;</span><span class="p">;</span>  <span class="c1"># Memory stats file</span>
+    <span class="n">allow</span><span class="o">-</span><span class="n">query</span> <span class="p">{</span> <span class="nb">any</span><span class="p">;</span> <span class="p">};</span>  <span class="c1"># Allow queries from any IP address</span>
+    <span class="n">recursion</span> <span class="n">yes</span><span class="p">;</span>  <span class="c1"># Enable recursion</span>
+    <span class="n">forwarders</span> <span class="p">{</span>
+        <span class="mf">8.8.8.8</span><span class="p">;</span>  <span class="c1"># Google Public DNS</span>
+        <span class="mf">8.8.4.4</span><span class="p">;</span>  <span class="c1"># Google Public DNS</span>
+        <span class="c1"># Add other external DNS servers here</span>
+    <span class="p">};</span>
+    <span class="n">dnssec</span><span class="o">-</span><span class="n">enable</span> <span class="n">yes</span><span class="p">;</span>  <span class="c1"># Enable DNSSEC</span>
+    <span class="n">dnssec</span><span class="o">-</span><span class="n">validation</span> <span class="n">auto</span><span class="p">;</span>  <span class="c1"># Enable automatic DNSSEC validation</span>
+    <span class="n">auth</span><span class="o">-</span><span class="n">nxdomain</span> <span class="n">no</span><span class="p">;</span>  <span class="c1"># Suppress authoritative NXDOMAIN responses</span>
+    <span class="n">listen</span><span class="o">-</span><span class="n">on</span><span class="o">-</span><span class="n">v6</span> <span class="p">{</span> <span class="nb">any</span><span class="p">;</span> <span class="p">};</span>  <span class="c1"># Enable listening on IPv6</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p># Include the key for DNS updates
+include “/etc/named.rfc1912.zones”;
+include “/etc/named.default-zones”;</p>
+<p>Create or edit the zone files:</p>
+<p><strong>Forward Zone File</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">named</span><span class="o">/</span><span class="n">YOURDOMAINNAME</span><span class="o">.</span><span class="n">lan</span><span class="o">.</span><span class="n">db</span>
+</pre></div>
+</div>
+<p>Add the following configuration:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$TTL 86400
+@   IN  SOA ns1.YOURDOMAINNAME.lan. admin.YOURDOMAINNAME.lan. (
+            2024080501  ; Serial
+            3600        ; Refresh
+            1800        ; Retry
+            1209600     ; Expire
+            86400 )     ; Negative Cache TTL
+
+; Name servers
+@   IN  NS  ns1.YOURDOMAINNAME.lan.
+
+; A records for name servers
+ns1 IN  A   192.168.1.254
+
+; A records for other hosts
+@   IN  A   192.168.1.254
+</pre></div>
+</div>
+<p><strong>Reverse Zone File</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">named</span><span class="o">/</span><span class="mf">1.168.192</span><span class="o">.</span><span class="n">rev</span>
+</pre></div>
+</div>
+<p>Add the following configuration:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$TTL 86400
+@   IN  SOA ns1.YOURDOMAINNAME.lan. admin.YOURDOMAINNAME.lan. (
+            2024080501  ; Serial
+            3600        ; Refresh
+            1800        ; Retry
+            1209600     ; Expire
+            86400 )     ; Negative Cache TTL
+
+; Name servers
+@   IN  NS  ns1.YOURDOMAINNAME.lan.
+
+; PTR records
+254 IN  PTR  ns1.YOURDOMAINNAME.lan.
+</pre></div>
+</div>
+<p>Update the <cite>named.conf</cite> file to include these zone files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zone</span> <span class="s2">&quot;YOURDOMAINNAME.lan&quot;</span> <span class="n">IN</span> <span class="p">{</span>
+    <span class="nb">type</span> <span class="n">master</span><span class="p">;</span>
+    <span class="n">file</span> <span class="s2">&quot;/var/named/YOURDOMAINNAME.lan.db&quot;</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">zone</span> <span class="s2">&quot;1.168.192.in-addr.arpa&quot;</span> <span class="n">IN</span> <span class="p">{</span>
+    <span class="nb">type</span> <span class="n">master</span><span class="p">;</span>
+    <span class="n">file</span> <span class="s2">&quot;/var/named/1.168.192.rev&quot;</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Restart the BIND service to apply changes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">restart</span> <span class="n">named</span>
+</pre></div>
+</div>
+<p>Verify BIND is running and the configurations are correct:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">status</span> <span class="n">named</span>
+</pre></div>
+</div>
+<p>Test DNS resolution:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dig</span> <span class="o">@</span><span class="mf">192.168.1.254</span> <span class="n">example</span><span class="o">.</span><span class="n">YOURDOMAINNAME</span><span class="o">.</span><span class="n">lan</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="configure-webmin-for-gui-management">
+<h2>3. Configure Webmin for GUI Management<a class="headerlink" href="#configure-webmin-for-gui-management" title="Link to this heading"></a></h2>
+<section id="install-webmin">
+<h3>3.1 Install Webmin<a class="headerlink" href="#install-webmin" title="Link to this heading"></a></h3>
+<p>Create a repository file for Webmin:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">webmin</span><span class="o">.</span><span class="n">repo</span>
+</pre></div>
+</div>
+<p>Add the following content:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Webmin</span><span class="p">]</span>
+<span class="n">name</span><span class="o">=</span><span class="n">Webmin</span> <span class="n">Distribution</span>
+<span class="n">baseurl</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">webmin</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">yum</span>
+<span class="n">enabled</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">gpgcheck</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">gpgkey</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">webmin</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jcameron</span><span class="o">-</span><span class="n">key</span><span class="o">.</span><span class="n">asc</span>
+</pre></div>
+</div>
+<p>Install Webmin:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">webmin</span>
+</pre></div>
+</div>
+<p>Start and enable the Webmin service:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">start</span> <span class="n">webmin</span>
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">webmin</span>
+</pre></div>
+</div>
+<p>Access Webmin via your web browser:</p>
+<p>Open <cite>https://192.168.1.254:10000</cite> and log in with your root or administrative user credentials.</p>
+</section>
+<section id="configure-webmin-for-dhcp-and-dns-management">
+<h3>3.2 Configure Webmin for DHCP and DNS Management<a class="headerlink" href="#configure-webmin-for-dhcp-and-dns-management" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Log in to Webmin.</p></li>
+<li><p>Navigate to the “Servers” section and select “BIND DNS Server” and “DHCP Server”.</p></li>
+<li><p>Configure DHCP and DNS settings as needed through the Webmin interface.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

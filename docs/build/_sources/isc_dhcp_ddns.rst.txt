@@ -27,7 +27,7 @@ Start and enable the DHCP server service::
 
     sudo systemctl enable dhcpd
 
-1.2 Configure ``dhcpd.conf``
+1.2 Configure `dhcpd.conf`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Edit the DHCP configuration file::
