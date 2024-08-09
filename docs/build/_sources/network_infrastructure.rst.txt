@@ -3,8 +3,9 @@ Network Infrastructure
 
 Details about the network infrastructure setup.
 
-thing 1
+DNS and DHCP
 ---------
+:doc:`Setup ISC DHCP and DDNS <../isc_dhcp_ddns>`
 
 thing 2
 ======
@@ -13,4 +14,4 @@ thing 2
    :maxdepth: 1
 
    related_topic1
-   related_topic2
+   related_topic2       
