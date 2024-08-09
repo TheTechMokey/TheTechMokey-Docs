@@ -1,5 +1,5 @@
 Configuring ISC DHCP and DNS Servers with DDNS
-================================
+==============================================
 
 Simple walk-through of configuring DHCP and DNS on the same server with Dynamic Updates for a local domain.
 
@@ -28,7 +28,7 @@ Start and enable the DHCP server service::
     sudo systemctl enable dhcpd
 
 1.2 Configure ``dhcpd.conf``
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Edit the DHCP configuration file::
 

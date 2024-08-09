@@ -12,6 +12,7 @@ This guide is compiled information from fedoraproject and other sources.
 .. attention::
 
     **System Requirements:**
+    
     - 40GB SSD disk
     - 4GB RAM
 
