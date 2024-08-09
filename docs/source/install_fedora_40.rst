@@ -78,13 +78,13 @@ Select Install Fedora
 
 .. image:: /image/fedora_install.png
    :align: center
-   :scale: 25%
+   :scale: 20%
 
 Select your language and click Next/Continue.
 
 .. image:: /image/fedora_summary.png
    :align: center
-   :scale: 25%
+   :scale: 20%
 
 Change your Time & Date if needed.
 
@@ -92,7 +92,7 @@ Select the hard drive that you want to install on.
 
 .. image:: /image/fedora_destination.png
    :align: center
-   :scale: 25%
+   :scale: 20%
 
 You will notice a checkmark on the drive that you want to install on. If it's not checked, click it so it is.
 
@@ -121,14 +121,14 @@ Once complete, click "Finish Installation."
 
 .. image:: /image/fedora_complete.png
    :align: center
-   :scale: 25%
+   :scale: 20%
 
 Once complete, unplug your USB from your device and give it a restart.
 
 .. image:: /image/fedora_restart.png
    :align: center
-   :scale: 25%
-   
+   :scale: 20%
+
 Setup Fedora Workstation 40
 --------------------------- 
 
@@ -138,7 +138,7 @@ Click "Start Setup."
 
 .. image:: /image/fedora_start.png
    :align: center
-   :scale: 25%
+   :scale: 20%
 
 Privacy is up to you. Remember that Linux is open-source, meaning everyone contributes to make an awesome experience.
 
@@ -156,7 +156,7 @@ Put your name in, and then type in a username for this device.
 
 .. image:: /image/fedora_about_you.png
    :align: center
-   :scale: 25%
+   :scale: 20%
 
 Click ``Next``.
 
@@ -178,7 +178,7 @@ Click the overview button.
 
 .. image:: /image/fedora_overview.png
    :align: center
-   :scale: 100%
+   :scale: 50%
 
 Click on "Software."
 
@@ -186,7 +186,7 @@ Go to "Updates."
 
 .. image:: /image/fedora_software_center.png
    :align: center
-   :scale: 25%
+   :scale: 20%
 
 Then you're going to install updates, then restart & update.
 
@@ -203,12 +203,12 @@ Then top it off with a::
 
 .. image:: /image/fedora_restart_install.png
    :align: center
-   :scale: 25%
+   :scale: 20%
 
 Your system will restart and install updates.
 
 .. image:: /image/fedora_update.png
    :align: center
-   :scale: 25%
+   :scale: 20%
 
 Congratulations! You have installed Fedora 40 Workstation.
