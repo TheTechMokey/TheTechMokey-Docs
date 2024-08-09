@@ -8,7 +8,7 @@ Test
    :caption: Contents:
 
    network_infrastructure
-   ierver_infrastructure
+   server_infrastructure
    hardware
    operating_systems
    software
