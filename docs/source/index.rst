@@ -24,6 +24,15 @@ I started my programming journey with languages like C#, C++, and Java, creating
 This website centralizes my accumulated knowledge and experiences, offering valuable insights and resources for anyone navigating the dynamic IT landscape. Dive in and discover the wealth of information that can help you on your own tech journey!
 
 
+:doc:`ISC DHCP and DDNS <../isc_dhcp_ddns>`
+
+* this is an image
+
+.. figure:: /source/image/clip.png 
+   :align: center
+   :alt: Clip to Site Image 
+   :scale: 100%
+
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
 that creates recipes mixing random ingredients.
 It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_

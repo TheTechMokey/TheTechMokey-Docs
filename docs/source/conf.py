@@ -3,8 +3,7 @@
 # -- Project information
 
 project = 'The Tech Mokey'
-copyright = '2021, Graziella'
-author = 'Graziella'
+author = 'Mokey'
 
 release = '0.1'
 version = '0.1.0'
