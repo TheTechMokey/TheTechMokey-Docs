@@ -3,8 +3,8 @@ Operating Systems
 
 Details about the network infrastructure setup.
 
-.. toctree::
-   :maxdepth: 1
 
-   related_topic1
-   related_topic2
+Fedora 40
+---------
+
+:doc:`Install Fedora 40 <install_fedora_40>` 

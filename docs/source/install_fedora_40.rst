@@ -15,7 +15,7 @@ This guide is compiled information from fedoraproject and other sources.
     - 4GB RAM
 
 Download Fedora Workstation
-===========================
+---------------------------
 
 Go to https://fedoraproject.org/en/workstation/download
 
@@ -60,7 +60,7 @@ Under Download, check "Delete download after writing."
 Click "Download & Write."
 
 Install Fedora Workstation 40
-=============================
+-----------------------------
 
 Select ``Start Fedora-Workstation 40``.
 
@@ -71,7 +71,6 @@ Select ``Start Fedora-Workstation 40``.
 You are now on the Fedora Workstation Desktop Environment! That was EASY!! You can choose to play around in this environment. It's very lightweight and can give you a ground-level feel for it.
 
 Select Install Fedora
-----------------------
 
 .. image:: /image/fedora_install.png
    :align: center
@@ -99,7 +98,6 @@ Storage Configuration
 For this guide, we will not be talking about RAID configuration. So for now, click "Automatic."
 
 Encryption
-----------
 
 You can choose to encrypt your drive... or not.
 
@@ -126,3 +124,86 @@ Once complete, unplug your USB from your device and give it a restart.
 .. image:: /image/fedora_restart.png
    :align: center
    :scale: 25%
+Setup Fedora Workstation 40
+--------------------------- 
+
+Now we're ready to set up Fedora Workstation 40!
+
+Click "Start Setup."
+
+.. image:: /image/fedora_start.png
+   :align: center
+   :scale: 25%
+
+Privacy is up to you. Remember that Linux is open-source, meaning everyone contributes to make an awesome experience.
+
+Click "Next" after your selection.
+
+You're going to want to enable Third Party Repositories for ease of use.
+
+Click ``Enable Third-Party Repos            itories``
+
+Click ``Next``.
+
+The "About You" section is what you will log in with.
+
+Put your name in, and then type in a username for this device.
+
+.. image:: /image/fedora_about_you.png
+   :align: center
+   :scale: 25%
+
+Click ``Next``.
+
+Type in your password.
+
+.. note:: 
+
+    If you encrypted your hard drive, do not use the same password. It only makes sense.
+
+All Done
+
+Select ``Start Using Fedora``.
+
+Take a tour if you'd like, or skip the tour and get down to it.
+
+Now, before you get into it, just like any OS, you're going to want to update.
+
+Click the overview button.
+
+.. image:: /image/fedora_overview.png
+   :align: center
+   :scale: 100%
+
+Click on "Software."
+
+Go to "Updates."
+
+.. image:: /image/fedora_software_center.png
+   :align: center
+   :scale: 25%
+
+Then you're going to install updates, then restart & update.
+
+Click "Restart and Install."
+
+Alternatively, you can use the below in the terminal::
+
+    sudo dnf -y update
+    sudo dnf -y upgrade --refresh
+
+Then top it off with a::
+
+    reboot
+
+.. image:: /image/fedora_restart_install.png
+   :align: center
+   :scale: 25%
+
+Your system will restart and install updates.
+
+.. image:: /image/fedora_update.png
+   :align: center
+   :scale: 25%
+
+Congratulations! You have installed Fedora 40 Workstation.

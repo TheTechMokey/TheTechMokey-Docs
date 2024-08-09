@@ -11,7 +11,5 @@ Test
    server_infrastructure
    hardware
    operating_systems
-   Install Fedora 40 <install_fedora_40>
-   Setup Fedora Workstation 40 <setup_fedora_workstation_40>
    software
-   about
+   about 
