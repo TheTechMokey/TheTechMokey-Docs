@@ -1,5 +1,9 @@
-Install Fedora 40
+Install and Setup Fedora 40
 ==================
+
+.. contents::
+   :local:
+   :depth: 20
 
 Official Documentation
 
