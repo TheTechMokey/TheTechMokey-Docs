@@ -1,63 +1,15 @@
 The Tech Mokey's Documentation Site
 ===================================
 
-Details about the network infrastructure setup.
-
-Network Infrastructure
-======================
-
-DNS and DHCP
-------------
-
-   :doc:`Setup ISC DHCP and DNS with DDNS  <../isc_dhcp_ddns>`
-
-Server Infrastructure
-======================= 
-
-Virtual Servers
-----------------
-   Proxmox
-   
-Hardware
-=======================
-
-Servers
--------
-
-Mini Computers
---------------
-
-Computers
----------
-
-Laptops
----------
-
-Raspberry Pi
-------------
-
-   
-Operating Systems
-=================
-
-Fedora
-------
-
-
-Software
-======== 
-
-Terminal Tools 
---------------
-:doc:`ZSH and OhMyZsh <../zsh>`
+Test
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   Network Infrastructure
-   Server Infrastructure
-   Hardware
-   Operating Systems
-   Software
-   About
+   network_infrastructure
+   ierver_infrastructure
+   hardware
+   operating_systems
+   software
+   about

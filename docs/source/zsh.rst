@@ -4,6 +4,10 @@ Installing Zsh and Oh My Zsh
 
 This guide will walk you through installing Zsh, Oh My Zsh, and some useful plugins to enhance your terminal experience.
 
+.. image:: /image/zsh.png
+   :align: center
+   :scale: 25%
+
 Dependencies
 ============
 
