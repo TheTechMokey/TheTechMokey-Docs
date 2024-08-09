@@ -145,7 +145,7 @@ Click "Next" after your selection.
 
 You're going to want to enable Third Party Repositories for ease of use.
 
-Click ``Enable Third-Party Repos            itories``
+Click ``Enable Third-Party Repositories``
 
 Click ``Next``.
 
