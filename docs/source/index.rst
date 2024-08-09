@@ -20,10 +20,22 @@ Virtual Servers
    
 Hardware
 =======================
-   Computers
-   Laptops
+
+Servers
+-------
+
+Mini Computers
+--------------
+
 Computers
 ---------
+
+Laptops
+---------
+
+Raspberry Pi
+------------
+
    
 Operating Systems
 =================
@@ -49,5 +61,3 @@ Terminal Tools
    Operating Systems
    Software
    About
-
-
