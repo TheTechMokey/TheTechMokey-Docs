@@ -1,4 +1,4 @@
-Configuring DHCP and DNS Servers
+Configuring ISC DHCP and DNS Servers with DDNS
 ================================
 
 Simple walk-through of configuring DHCP and DNS on the same server with Dynamic Updates for a local domain.
