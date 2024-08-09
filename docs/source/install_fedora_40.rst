@@ -128,6 +128,7 @@ Once complete, unplug your USB from your device and give it a restart.
 .. image:: /image/fedora_restart.png
    :align: center
    :scale: 25%
+   
 Setup Fedora Workstation 40
 --------------------------- 
 
