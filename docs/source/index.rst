@@ -4,12 +4,15 @@ The Tech Mokey's Documentation Site
 Details about the network infrastructure setup.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
+   :caption: Contents:
 
-   related_topic1
-   related_topic2
-
-
+   Network Infrastructure
+   Server Infrastructure
+   Hardware
+   Operating Systems
+   Software
+   About
 
 :doc:`ISC DHCP and DDNS <../isc_dhcp_ddns>`
 :doc:`Install zsh and Oh My Zsh <../zsh>`
@@ -58,14 +61,3 @@ A cool bit of code::
 .. code-block:: rst
 
    A bit of **rst** which should be *highlighted* properly.
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   Network Infrastructure
-   Server Infrastructure
-   Hardware
-   Operating Systems
-   Software
-   About
