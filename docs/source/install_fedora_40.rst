@@ -1,20 +1,18 @@
 Install and Setup Fedora 40 Workstation
-==================
+=======================================
 
 .. contents::
    :local:
    :depth: 20
 
-Official Documentation
-
-https://docs.fedoraproject.org/en-US/workstation-docs/
+`Official Documentation <https://docs.fedoraproject.org/en-US/workstation-docs/>`_
 
 This guide is compiled information from fedoraproject and other sources.
 
 .. attention::
 
     **System Requirements:**
-
+    
     - 40GB SSD disk
     - 4GB RAM
 
@@ -44,7 +42,7 @@ Select Your Release
 
 Unlike Windows, there are many releases. You can do some research on these at https://fedoraproject.org/spins/
 
-Personally, I use Fedora KDE Plasma Desktop. But for this guide, we will be working with the official release of Fedora Workstation.
+Personally, I use `Fedora KDE Plasma Desktop <https://fedoraproject.org/spins/kde/>`_. But for this guide, we will be working with the official release of Fedora Workstation.
 
 .. image:: /image/fmr_mediawriter_release.png
    :align: center
