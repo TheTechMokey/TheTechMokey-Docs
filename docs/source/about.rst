@@ -1,8 +1,5 @@
-                        .. toctree::
-   :maxdepth: 1
-
-   related_topic1
-   related_topic2
+.. toctree::
+   :maxdepth: 2
 
 About
 =====

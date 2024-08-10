@@ -7,6 +7,7 @@
   <title>Fedora Post Install - Terminal &mdash; The Tech Mokey 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css" />
 
   
@@ -19,6 +20,8 @@
         <script src="_static/documentation_options.js?v=2709fde1"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -85,25 +88,24 @@
 <h1>Fedora Post Install - Terminal<a class="headerlink" href="#fedora-post-install-terminal" title="Link to this heading"></a></h1>
 <section id="set-hostname">
 <h2>Set Hostname<a class="headerlink" href="#set-hostname" title="Link to this heading"></a></h2>
-<p>Set your device’s Hostname, Replace HOSTNAME with your hostname:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hostnamectl</span> <span class="nb">set</span><span class="o">-</span><span class="n">hostname</span> <span class="n">HOSTNAME</span>
+<p>Set your device’s Hostname, Replace HOSTNAME with your hostname</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>HOSTNAME
 </pre></div>
 </div>
 </section>
 <section id="rpm-fusion">
 <h2>RPM Fusion<a class="headerlink" href="#rpm-fusion" title="Link to this heading"></a></h2>
-<p>Install RPM Fustion Repository:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+<p>Install RPM Fustion Repository</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-<span class="k">$(</span>rpm<span class="w"> </span>-E<span class="w"> </span>%fedora<span class="k">)</span>.noarch.rpm<span class="w"> </span>https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-<span class="k">$(</span>rpm<span class="w"> </span>-E<span class="w"> </span>%fedora<span class="k">)</span>.noarch.rpm
 </pre></div>
 </div>
 <section id="update">
 <h3>Update<a class="headerlink" href="#update" title="Link to this heading"></a></h3>
-<p>Update Fedora:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="o">-</span><span class="n">y</span> <span class="n">update</span>
+<p>Update fedora</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>update
+sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>upgrade<span class="w"> </span>--refresh
 
-<span class="n">sudo</span> <span class="n">dnf</span> <span class="o">-</span><span class="n">y</span> <span class="n">upgrade</span> <span class="o">--</span><span class="n">refresh</span>
-
-<span class="n">reboot</span>
+reboot
 </pre></div>
 </div>
 </section>
@@ -114,12 +116,12 @@
 <p class="admonition-title">Warning</p>
 <p>Ensure Secure Boot is disabled before proceeding</p>
 </div>
-<p>Install Drivers:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">akmod</span><span class="o">-</span><span class="n">nvidia</span>
+<p>Install Drivers</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>akmod-nvidia
 </pre></div>
 </div>
-<p>Install Additional Drivers for CUDA enabled devices such as Davinci, Resolve, Blender, etc…:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">xorg</span><span class="o">-</span><span class="n">x11</span><span class="o">-</span><span class="n">drv</span><span class="o">-</span><span class="n">nvidia</span><span class="o">-</span><span class="n">cuda</span>
+<p>Install Additional Drivers for CUDA enabled software such as Davinci, Resolve, Blender, etc…</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>xorg-x11-drv-nvidia-cuda
 </pre></div>
 </div>
 <div class="admonition note">
@@ -129,28 +131,35 @@
 </section>
 <section id="media-codecs">
 <h2>Media Codecs<a class="headerlink" href="#media-codecs" title="Link to this heading"></a></h2>
-<p>Install Media Codecs:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">swap</span> <span class="s1">&#39;ffmpeg-free&#39;</span> <span class="s1">&#39;ffmpeg&#39;</span> <span class="o">--</span><span class="n">allowerasing</span>
+<p>Install Media Codecs</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>swap<span class="w"> </span><span class="s1">&#39;ffmpeg-free&#39;</span><span class="w"> </span><span class="s1">&#39;ffmpeg&#39;</span><span class="w"> </span>--allowerasing
 
-<span class="n">sudo</span> <span class="n">dnf</span> <span class="n">update</span> <span class="nd">@multimedia</span> <span class="o">--</span><span class="n">setopt</span><span class="o">=</span><span class="s2">&quot;install_weak_deps=False&quot;</span> <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="n">PackageKit</span><span class="o">-</span><span class="n">gstreamer</span><span class="o">-</span><span class="n">plugin</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>update<span class="w"> </span>@multimedia<span class="w"> </span>--setopt<span class="o">=</span><span class="s2">&quot;install_weak_deps=False&quot;</span><span class="w"> </span>--exclude<span class="o">=</span>PackageKit-gstreamer-plugin
 
-<span class="n">sudo</span> <span class="n">dnf</span> <span class="n">update</span> <span class="nd">@sound</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">video</span> <span class="c1"># Installs useful Sound and Video complement packages.</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>update<span class="w"> </span>@sound-and-video
 
-<span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">Multimedia</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>Multimedia
 </pre></div>
 </div>
 </section>
 <section id="network-manager-wait-online-service">
 <h2>Network Manager Wait Online Service<a class="headerlink" href="#network-manager-wait-online-service" title="Link to this heading"></a></h2>
-<p>Disable the <code class="docutils literal notranslate"><span class="pre">NetworkManager-wait-online.service</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">disable</span> <span class="n">NetworkManager</span><span class="o">-</span><span class="n">wait</span><span class="o">-</span><span class="n">online</span><span class="o">.</span><span class="n">service</span>
+<p>Disable the <code class="docutils literal notranslate"><span class="pre">NetworkManager-wait-online.service</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>NetworkManager-wait-online.service
 </pre></div>
 </div>
 </section>
 <section id="gnome-software-startup">
 <h2>Gnome Software Startup<a class="headerlink" href="#gnome-software-startup" title="Link to this heading"></a></h2>
-<p>Disable the Gnome software from your startup apps:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">rm</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">xdg</span><span class="o">/</span><span class="n">autostart</span><span class="o">/</span><span class="n">org</span><span class="o">.</span><span class="n">gnome</span><span class="o">.</span><span class="n">Software</span><span class="o">.</span><span class="n">desktop</span>
+<p>Disable the Gnome software from your startup apps</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>rm<span class="w"> </span>/etc/xdg/autostart/org.gnome.Software.desktop
+</pre></div>
+</div>
+</section>
+<section id="reboot">
+<h2>Reboot<a class="headerlink" href="#reboot" title="Link to this heading"></a></h2>
+<p>Top it all off with a reboot</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>reboot
 </pre></div>
 </div>
 <p>Dun</p>
