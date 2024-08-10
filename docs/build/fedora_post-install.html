@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fedora Post Install - Terminal &mdash; The Tech Mokey 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            The Tech Mokey
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="network_infrastructure.html">Network Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_infrastructure.html">Server Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operating_systems.html">Operating Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">The Tech Mokey</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Fedora Post Install - Terminal</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/fedora_post-install.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fedora-post-install-terminal">
+<h1>Fedora Post Install - Terminal<a class="headerlink" href="#fedora-post-install-terminal" title="Link to this heading"></a></h1>
+<section id="set-hostname">
+<h2>Set Hostname<a class="headerlink" href="#set-hostname" title="Link to this heading"></a></h2>
+<p>Set your device’s Hostname, Replace HOSTNAME with your hostname:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hostnamectl</span> <span class="nb">set</span><span class="o">-</span><span class="n">hostname</span> <span class="n">HOSTNAME</span>
+</pre></div>
+</div>
+</section>
+<section id="rpm-fusion">
+<h2>RPM Fusion<a class="headerlink" href="#rpm-fusion" title="Link to this heading"></a></h2>
+<p>Install RPM Fustion Repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+</pre></div>
+</div>
+<section id="update">
+<h3>Update<a class="headerlink" href="#update" title="Link to this heading"></a></h3>
+<p>Update Fedora:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="o">-</span><span class="n">y</span> <span class="n">update</span>
+
+<span class="n">sudo</span> <span class="n">dnf</span> <span class="o">-</span><span class="n">y</span> <span class="n">upgrade</span> <span class="o">--</span><span class="n">refresh</span>
+
+<span class="n">reboot</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="nvidia-drivers-if-applicable">
+<h2>NVIDIA Drivers - If Applicable<a class="headerlink" href="#nvidia-drivers-if-applicable" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ensure Secure Boot is disabled before proceeding</p>
+</div>
+<p>Install Drivers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">akmod</span><span class="o">-</span><span class="n">nvidia</span>
+</pre></div>
+</div>
+<p>Install Additional Drivers for CUDA enabled devices such as Davinci, Resolve, Blender, etc…:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">xorg</span><span class="o">-</span><span class="n">x11</span><span class="o">-</span><span class="n">drv</span><span class="o">-</span><span class="n">nvidia</span><span class="o">-</span><span class="n">cuda</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Let the kernel get built. So take about 5 minutes after it’s installed to do additional steps.</p>
+</div>
+</section>
+<section id="media-codecs">
+<h2>Media Codecs<a class="headerlink" href="#media-codecs" title="Link to this heading"></a></h2>
+<p>Install Media Codecs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">swap</span> <span class="s1">&#39;ffmpeg-free&#39;</span> <span class="s1">&#39;ffmpeg&#39;</span> <span class="o">--</span><span class="n">allowerasing</span>
+
+<span class="n">sudo</span> <span class="n">dnf</span> <span class="n">update</span> <span class="nd">@multimedia</span> <span class="o">--</span><span class="n">setopt</span><span class="o">=</span><span class="s2">&quot;install_weak_deps=False&quot;</span> <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="n">PackageKit</span><span class="o">-</span><span class="n">gstreamer</span><span class="o">-</span><span class="n">plugin</span>
+
+<span class="n">sudo</span> <span class="n">dnf</span> <span class="n">update</span> <span class="nd">@sound</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">video</span> <span class="c1"># Installs useful Sound and Video complement packages.</span>
+
+<span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">Multimedia</span>
+</pre></div>
+</div>
+</section>
+<section id="network-manager-wait-online-service">
+<h2>Network Manager Wait Online Service<a class="headerlink" href="#network-manager-wait-online-service" title="Link to this heading"></a></h2>
+<p>Disable the <code class="docutils literal notranslate"><span class="pre">NetworkManager-wait-online.service</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">disable</span> <span class="n">NetworkManager</span><span class="o">-</span><span class="n">wait</span><span class="o">-</span><span class="n">online</span><span class="o">.</span><span class="n">service</span>
+</pre></div>
+</div>
+</section>
+<section id="gnome-software-startup">
+<h2>Gnome Software Startup<a class="headerlink" href="#gnome-software-startup" title="Link to this heading"></a></h2>
+<p>Disable the Gnome software from your startup apps:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">rm</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">xdg</span><span class="o">/</span><span class="n">autostart</span><span class="o">/</span><span class="n">org</span><span class="o">.</span><span class="n">gnome</span><span class="o">.</span><span class="n">Software</span><span class="o">.</span><span class="n">desktop</span>
+</pre></div>
+</div>
+<p>Dun</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

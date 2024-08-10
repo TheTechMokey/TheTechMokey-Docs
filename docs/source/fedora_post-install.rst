@@ -1,0 +1,82 @@
+Fedora Post Install - Terminal
+==============================
+
+Set Hostname
+------------
+
+Set your device's Hostname, Replace HOSTNAME with your hostname::
+
+    hostnamectl set-hostname HOSTNAME
+
+RPM Fusion
+----------
+
+Install RPM Fustion Repository::
+
+    sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+Update
+~~~~~~
+
+Update Fedora::
+
+    sudo dnf -y update
+
+    sudo dnf -y upgrade --refresh
+
+    reboot
+
+NVIDIA Drivers - If Applicable
+------------------------------
+
+.. warning::
+
+    Ensure Secure Boot is disabled before proceeding
+
+Install Drivers::
+    
+    sudo dnf install akmod-nvidia
+
+Install Additional Drivers for CUDA enabled software such as Davinci, Resolve, Blender, etc...::
+
+    sudo dnf install xorg-x11-drv-nvidia-cuda
+
+.. note:: 
+
+    Let the kernel get built. So take about 5 minutes after it's installed to do additional steps.
+
+Media Codecs
+------------
+
+Install Media Codecs::
+
+    sudo dnf swap 'ffmpeg-free' 'ffmpeg' --allowerasing
+
+    sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+
+    sudo dnf update @sound-and-video
+
+    sudo dnf install Multimedia
+
+Network Manager Wait Online Service
+-----------------------------------
+
+Disable the ``NetworkManager-wait-online.service``::
+
+    sudo systemctl disable NetworkManager-wait-online.service
+
+Gnome Software Startup
+----------------------
+
+Disable the Gnome software from your startup apps::
+
+    sudo rm /etc/xdg/autostart/org.gnome.Software.desktop
+
+Reboot
+------
+
+Top it all off with a reboot::
+
+    reboot
+
+Dun

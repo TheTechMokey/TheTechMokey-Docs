@@ -13,5 +13,5 @@ Fedora 40
 
 Install Fedora 40
 ~~~~~~~~~~~~~~~~~
-:doc:`Install Fedora 40 <install_fedora_40>` 
 
+:doc:`Install Fedora 40 <install_fedora_40>` 
