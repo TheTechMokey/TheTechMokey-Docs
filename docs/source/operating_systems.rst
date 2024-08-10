@@ -1,7 +1,7 @@
 Operating Systems
 =================
 
-Fedora 40
+Fedora 40 Workstation
 ---------
 
 .. toctree::
