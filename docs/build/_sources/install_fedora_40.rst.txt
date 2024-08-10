@@ -3,7 +3,7 @@ Install and Setup Fedora 40 Workstation
 
 .. contents::
    :local:
-   :depth: 20
+   :depth: 50
 
 `Official Documentation <https://docs.fedoraproject.org/en-US/workstation-docs/>`_
 
