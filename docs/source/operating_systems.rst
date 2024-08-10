@@ -5,7 +5,7 @@ Fedora 40
 ---------
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    install_fedora_40
    fedora_post-install

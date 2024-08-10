@@ -4,7 +4,7 @@ The Tech Mokey's Documentation Site
 Test
 
 .. toctree::
-   :maxdepth: 50
+   :maxdepth: 2
    :caption: Table of Contents
 
    

@@ -7,4 +7,4 @@ DHCP & DNS
 .. toctree::
    :maxdepth: 2
 
-   isc_dhcp_ddns 
+   isc_dhcp_ddns
