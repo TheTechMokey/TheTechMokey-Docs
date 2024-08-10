@@ -25,7 +25,9 @@
     <script src="_static/js/theme.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Server Infrastructure" href="server_infrastructure.html" />
+    <link rel="prev" title="Network Infrastructure" href="network_infrastructure.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,14 +53,23 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operating_systems.html">Operating Systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_fedora_40.html">Install and Setup Fedora 40 Workstation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fedora_post-install.html">Fedora Post Install - Terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="software.html">Software</a></li>
-<li class="toctree-l1"><a class="reference internal" href="network_infrastructure.html">Network Infrastructure</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="network_infrastructure.html">Network Infrastructure</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="network_infrastructure.html#dhcp-dns">DHCP &amp; DNS</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Configuring ISC DHCP and DNS Servers with DDNS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#set-up-dhcp-server">1. Set Up DHCP Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-up-dns-server-bind">2. Set Up DNS Server (BIND)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-webmin-for-gui-management">3. Configure Webmin for GUI Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="server_infrastructure.html">Server Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operating_systems.html">Operating Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
 </ul>
 
@@ -76,6 +87,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="network_infrastructure.html">Network Infrastructure</a></li>
       <li class="breadcrumb-item active">Configuring ISC DHCP and DNS Servers with DDNS</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/isc_dhcp_ddns.rst.txt" rel="nofollow"> View page source</a>
@@ -378,7 +390,10 @@ ns1 IN  A   192.168.1.254
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="network_infrastructure.html" class="btn btn-neutral float-left" title="Network Infrastructure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="server_infrastructure.html" class="btn btn-neutral float-right" title="Server Infrastructure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
