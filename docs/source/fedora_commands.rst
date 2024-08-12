@@ -8,7 +8,7 @@ Fedora Commands
 .. _awk:
 
 awk
-====
+~~~~
 
 **Description:**
 
@@ -31,7 +31,7 @@ A powerful text processing tool that allows for pattern scanning and processing.
 .. _cat:
 
 cat
-====
+~~~~
 
 **Description:**
 
@@ -54,7 +54,7 @@ Concatenates and displays the contents of files.
 .. _cd:
 
 cd
-====
+~~~~
 
 **Description:**
 
@@ -75,7 +75,7 @@ Changes the current directory.
 .. _chmod:
 
 chmod
-======
+~~~~~~
 
 **Description:**
 
@@ -98,7 +98,7 @@ Changes the file modes or Access Control Lists (ACLs) of files.
 .. _chown:
 
 chown
-======
+~~~~~~
 
 **Description:**
 
@@ -121,7 +121,7 @@ Changes the ownership of files and directories.
 .. _cp:
 
 cp
-===
+~~~
 
 **Description:**
 
@@ -144,7 +144,7 @@ Copies files and directories.
 .. _curl:
 
 curl
-=====
+~~~~~
 
 **Description:**
 
@@ -168,7 +168,7 @@ Transfers data from or to a server using various protocols.
 .. _df:
 
 df
-===
+~~~
 
 **Description:**
 
@@ -191,7 +191,7 @@ Displays disk space usage of file systems.
 .. _diff:
 
 diff
-=====
+~~~~~
 
 **Description:**
 
@@ -215,7 +215,7 @@ Compares files line by line.
 .. _du:
 
 du
-===
+~~~
 
 **Description:**
 
@@ -239,7 +239,7 @@ Estimates file space usage.
 .. _echo:
 
 echo
-=====
+~~~~~
 
 **Description:**
 
@@ -260,7 +260,7 @@ Displays a line of text or a variable value.
 .. _find:
 
 find
-=====
+~~~~~
 
 **Description:**
 
@@ -284,7 +284,7 @@ Searches for files in a directory hierarchy.
 .. _grep:
 
 grep
-=====
+~~~~~
 
 **Description:**
 
@@ -308,7 +308,7 @@ Searches for patterns within files.
 .. _head:
 
 head
-=====
+~~~~~
 
 **Description:**
 
@@ -330,7 +330,7 @@ Outputs the first part of files.
 .. _history:
 
 history
-========
+~~~~~~~~
 
 **Description:**
 
@@ -354,8 +354,7 @@ Displays or manipulates the command history.
 .. _kill:
 
 kill
-=====
-
+~~~~~
 **Description:**
 
 Sends a signal to a process.
@@ -377,7 +376,7 @@ Sends a signal to a process.
 .. _less:
 
 less
-=====
+~~~~~
 
 **Description:**
 
@@ -400,7 +399,7 @@ Views file contents interactively, one screen at a time.
 .. _ln:
 
 ln
-====
+~~~~
 
 **Description:**
 
@@ -422,7 +421,7 @@ Creates hard and symbolic links.
 .. _ls:
 
 ls
-====
+~~~~
 
 **Description:**
 
@@ -446,7 +445,7 @@ Lists directory contents.
 .. _man:
 
 man
-=====
+~~~~~
 
 **Description:**
 
@@ -468,7 +467,7 @@ Displays the manual page for a command.
 .. _mkdir:
 
 mkdir
-======
+~~~~~~
 
 **Description:**
 
@@ -490,7 +489,7 @@ Creates directories.
 .. _mv:
 
 mv
-====
+~~~~
 
 **Description:**
 
@@ -512,7 +511,7 @@ Moves or renames files and directories.
 .. _nc:
 
 nc
-====
+~~~~
 
 **Description:**
 
@@ -535,7 +534,7 @@ Netcat is used for network diagnostics and debugging.
 .. _ping:
 
 ping
-=====
+~~~~~
 
 **Description:**
 
@@ -558,7 +557,7 @@ Sends ICMP ECHO_REQUEST packets to network hosts.
 .. _ps:
 
 ps
-===
+~~~
 
 **Description:**
 
@@ -581,7 +580,7 @@ Displays information about active processes.
 .. _pwd:
 
 pwd
-====
+~~~~
 
 **Description:**
 
@@ -602,7 +601,7 @@ Prints the current working directory.
 .. _rm:
 
 rm
-===
+~~~~
 
 **Description:**
 
@@ -624,7 +623,7 @@ Removes files or directories.
 .. _rmdir:
 
 rmdir
-======
+~~~~~~
 
 **Description:**
 
@@ -644,7 +643,7 @@ Removes empty directories.
 .. _sed:
 
 sed
-====
+~~~~
 
 **Description:**
 
@@ -667,7 +666,7 @@ Stream editor for filtering and transforming text.
 .. _sort:
 
 sort
-=====
+~~~~~
 
 **Description:**
 
@@ -690,7 +689,7 @@ Sorts lines of text files.
 .. _ssh:
 
 ssh
-====
+~~~~
 
 **Description:**
 
@@ -712,7 +711,7 @@ Securely connects to a remote machine.
 .. _tar:
 
 tar
-====
+~~~~
 
 **Description:**
 
@@ -736,7 +735,7 @@ Archives files and directories.
 .. _touch:
 
 touch
-======
+~~~~~~
 
 **Description:**
 
@@ -758,7 +757,7 @@ Changes file timestamps or creates empty files.
 .. _uname:
 
 uname
-======
+~~~~~~
 
 **Description:**
 
@@ -781,7 +780,7 @@ Prints system information.
 .. _wget:
 
 wget
-=====
+~~~~~
 
 **Description:**
 
@@ -804,7 +803,7 @@ Downloads files from the web.
 .. _which:
 
 which
-======
+~~~~~~
 
 **Description:**
 
@@ -826,7 +825,7 @@ Shows the full path of shell commands.
 .. _whoami:
 
 whoami
-=======
+~~~~~~~
 
 **Description:**
 
@@ -846,7 +845,7 @@ Displays the current logged-in username.
 .. _xargs:
 
 xargs
-======
+~~~~~~
 
 **Description:**
 
@@ -868,7 +867,7 @@ Builds and executes command lines from standard input.
 .. _zip:
 
 zip
-====
+~~~~
 
 **Description:**
 
@@ -890,7 +889,7 @@ Package and compress files into a ZIP archive.
 .. _zsh:
 
 zsh
-====
+~~~~
 
 **Description:**
 
