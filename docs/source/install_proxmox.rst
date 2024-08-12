@@ -7,19 +7,19 @@ Installing with ``dd`` command
 
 Locate your drive you want to install the ISO to.
 
-.. code:: bash
+.. code-block:: bash
 
     lsblk
 
 Unmount the USB Drive: If the USB drive is mounted, unmount it. Replace /dev/sdX1 with the correct partition identifier (e.g., /dev/sda1).
 
-.. code:: bash
+.. code-block:: bash
     
     sudo umount /dev/sdX1
 
 Create the Bootable USB: Use the ``dd`` command to write the ISO image to the USB drive. Replace /path/to/image.iso with the path to your ISO file and /dev/sdX with the USB drive (e.g., /dev/sdb).
 
-.. code:: bash
+.. code-block:: bash
 
     sudo dd if=/path/to/image.iso of=/dev/sdX bs=4M status=progress
 

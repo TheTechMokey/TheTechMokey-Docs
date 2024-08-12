@@ -61,48 +61,8 @@
 <li class="toctree-l3"><a class="reference internal" href="install_fedora_40.html">Install and Setup Fedora 40 Workstation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fedora_post-install.html">Fedora Post Install - Terminal</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Fedora Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">~</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#awk">awk</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cat">cat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cd">cd</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#chmod">chmod</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#chown">chown</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cp">cp</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#curl">curl</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#df">df</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#diff">diff</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#du">du</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#echo">echo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#find">find</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#grep">grep</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#head">head</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#history">history</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#kill">kill</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#less">less</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ln">ln</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ls">ls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#man">man</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#mkdir">mkdir</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#mv">mv</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#nc">nc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ping">ping</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ps">ps</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pwd">pwd</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rm">rm</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rmdir">rmdir</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sed">sed</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sort">sort</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ssh">ssh</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tail">tail</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tar">tar</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#touch">touch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#uname">uname</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#wget">wget</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#which">which</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#whoami">whoami</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#xargs">xargs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#zip">zip</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#zsh">zsh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#command-structure">Command Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#definitions">Definitions</a></li>
 </ul>
 </li>
 </ul>
@@ -143,52 +103,30 @@
 <h1>Fedora Commands<a class="headerlink" href="#fedora-commands" title="Link to this heading"></a></h1>
 <nav class="contents local" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#id1" id="id44">~</a></p></li>
-<li><p><a class="reference internal" href="#awk" id="id45">awk</a></p></li>
-<li><p><a class="reference internal" href="#cat" id="id46">cat</a></p></li>
-<li><p><a class="reference internal" href="#cd" id="id47">cd</a></p></li>
-<li><p><a class="reference internal" href="#chmod" id="id48">chmod</a></p></li>
-<li><p><a class="reference internal" href="#chown" id="id49">chown</a></p></li>
-<li><p><a class="reference internal" href="#cp" id="id50">cp</a></p></li>
-<li><p><a class="reference internal" href="#curl" id="id51">curl</a></p></li>
-<li><p><a class="reference internal" href="#df" id="id52">df</a></p></li>
-<li><p><a class="reference internal" href="#diff" id="id53">diff</a></p></li>
-<li><p><a class="reference internal" href="#du" id="id54">du</a></p></li>
-<li><p><a class="reference internal" href="#echo" id="id55">echo</a></p></li>
-<li><p><a class="reference internal" href="#find" id="id56">find</a></p></li>
-<li><p><a class="reference internal" href="#grep" id="id57">grep</a></p></li>
-<li><p><a class="reference internal" href="#head" id="id58">head</a></p></li>
-<li><p><a class="reference internal" href="#history" id="id59">history</a></p></li>
-<li><p><a class="reference internal" href="#kill" id="id60">kill</a></p></li>
-<li><p><a class="reference internal" href="#less" id="id61">less</a></p></li>
-<li><p><a class="reference internal" href="#ln" id="id62">ln</a></p></li>
-<li><p><a class="reference internal" href="#ls" id="id63">ls</a></p></li>
-<li><p><a class="reference internal" href="#man" id="id64">man</a></p></li>
-<li><p><a class="reference internal" href="#mkdir" id="id65">mkdir</a></p></li>
-<li><p><a class="reference internal" href="#mv" id="id66">mv</a></p></li>
-<li><p><a class="reference internal" href="#nc" id="id67">nc</a></p></li>
-<li><p><a class="reference internal" href="#ping" id="id68">ping</a></p></li>
-<li><p><a class="reference internal" href="#ps" id="id69">ps</a></p></li>
-<li><p><a class="reference internal" href="#pwd" id="id70">pwd</a></p></li>
-<li><p><a class="reference internal" href="#rm" id="id71">rm</a></p></li>
-<li><p><a class="reference internal" href="#rmdir" id="id72">rmdir</a></p></li>
-<li><p><a class="reference internal" href="#sed" id="id73">sed</a></p></li>
-<li><p><a class="reference internal" href="#sort" id="id74">sort</a></p></li>
-<li><p><a class="reference internal" href="#ssh" id="id75">ssh</a></p></li>
-<li><p><a class="reference internal" href="#tail" id="id76">tail</a></p></li>
-<li><p><a class="reference internal" href="#tar" id="id77">tar</a></p></li>
-<li><p><a class="reference internal" href="#touch" id="id78">touch</a></p></li>
-<li><p><a class="reference internal" href="#uname" id="id79">uname</a></p></li>
-<li><p><a class="reference internal" href="#wget" id="id80">wget</a></p></li>
-<li><p><a class="reference internal" href="#which" id="id81">which</a></p></li>
-<li><p><a class="reference internal" href="#whoami" id="id82">whoami</a></p></li>
-<li><p><a class="reference internal" href="#xargs" id="id83">xargs</a></p></li>
-<li><p><a class="reference internal" href="#zip" id="id84">zip</a></p></li>
-<li><p><a class="reference internal" href="#zsh" id="id85">zsh</a></p></li>
+<li><p><a class="reference internal" href="#command-structure" id="id35">Command Structure</a></p></li>
+<li><p><a class="reference internal" href="#definitions" id="id36">Definitions</a></p></li>
 </ul>
 </nav>
+<section id="command-structure">
+<h2><a class="toc-backref" href="#id35" role="doc-backlink">Command Structure</a><a class="headerlink" href="#command-structure" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">command</span> <span class="p">[</span><span class="o">-</span><span class="n">flag</span><span class="p">(</span><span class="n">s</span><span class="p">)]</span> <span class="p">[</span><span class="o">-</span><span class="n">option</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">[</span><span class="n">value</span><span class="p">]]</span> <span class="p">[</span><span class="n">argument</span><span class="p">(</span><span class="n">s</span><span class="p">)]</span>
+</pre></div>
+</div>
+</section>
+<section id="definitions">
+<h2><a class="toc-backref" href="#id36" role="doc-backlink">Definitions</a><a class="headerlink" href="#definitions" title="Link to this heading"></a></h2>
+<p><strong>Flags:</strong>
+Flags are single-letter options prefixed by a hyphen (<cite>-</cite>). They typically do not require a value and are used to enable or disable features of the command.</p>
+<p><strong>Options:</strong>
+Options are more descriptive parameters prefixed by one or two hyphens (<cite>-</cite> or <cite>–</cite>). They usually take a value to modify the behavior of the command.</p>
+<p><strong>Values:</strong>
+Values are the data provided to options. They can be arguments, numbers, or text that configure how the command operates.</p>
+<p><strong>Arguments:</strong>
+Arguments are inputs to the command, such as filenames, directories, or other data the command will process.</p>
+<p><strong>Examples:</strong>
+For the command <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">-f</span> <span class="pre">-v</span> <span class="pre">value</span> <span class="pre">argument</span></code>, <code class="docutils literal notranslate"><span class="pre">-f</span></code> is a flag, <code class="docutils literal notranslate"><span class="pre">-v`</span></code> is an option with the value <code class="docutils literal notranslate"><span class="pre">value</span></code>, and <code class="docutils literal notranslate"><span class="pre">argument</span></code> is an argument.</p>
 <section id="id1">
-<span id="id2"></span><h2><a class="toc-backref" href="#id44" role="doc-backlink">~</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<span id="id2"></span><h3>~<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">~</span></code> symbol represents the home directory of the current user. It provides a shorthand way to reference files and directories located in this directory.</p>
 <p><strong>Arguments:</strong></p>
@@ -205,10 +143,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="awk">
-<span id="id3"></span><h2><a class="toc-backref" href="#id45" role="doc-backlink">awk</a><a class="headerlink" href="#awk" title="Link to this heading"></a></h2>
+<span id="id3"></span><h3>awk<a class="headerlink" href="#awk" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>A powerful text processing tool that allows for pattern scanning and processing.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-F fs</cite>: Specifies the input field separator.</p></li>
 <li><p><cite>-v var=value</cite>: Assigns a value to a variable.</p></li>
@@ -221,10 +159,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="cat">
-<span id="id4"></span><h2><a class="toc-backref" href="#id46" role="doc-backlink">cat</a><a class="headerlink" href="#cat" title="Link to this heading"></a></h2>
+<span id="id4"></span><h3>cat<a class="headerlink" href="#cat" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Concatenates and displays the contents of files.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-n</cite>: Number all output lines.</p></li>
 <li><p><cite>-b</cite>: Number non-blank output lines.</p></li>
@@ -237,10 +175,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="cd">
-<span id="id5"></span><h2><a class="toc-backref" href="#id47" role="doc-backlink">cd</a><a class="headerlink" href="#cd" title="Link to this heading"></a></h2>
+<span id="id5"></span><h3>cd<a class="headerlink" href="#cd" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Changes the current directory.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-P</cite>: Use the physical directory structure without following symbolic links.</p></li>
 <li><p><cite>-L</cite>: Use the logical directory structure with symbolic links.</p></li>
@@ -251,10 +189,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="chmod">
-<span id="id6"></span><h2><a class="toc-backref" href="#id48" role="doc-backlink">chmod</a><a class="headerlink" href="#chmod" title="Link to this heading"></a></h2>
+<span id="id6"></span><h3>chmod<a class="headerlink" href="#chmod" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Changes the file modes or Access Control Lists (ACLs) of files.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-R</cite>: Change files and directories recursively.</p></li>
 <li><p><cite>-v</cite>: Verbose mode.</p></li>
@@ -267,10 +205,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="chown">
-<span id="id7"></span><h2><a class="toc-backref" href="#id49" role="doc-backlink">chown</a><a class="headerlink" href="#chown" title="Link to this heading"></a></h2>
+<span id="id7"></span><h3>chown<a class="headerlink" href="#chown" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Changes the ownership of files and directories.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-R</cite>: Operates on files and directories recursively.</p></li>
 <li><p><cite>-f</cite>: Suppress most error messages.</p></li>
@@ -283,10 +221,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="cp">
-<span id="id8"></span><h2><a class="toc-backref" href="#id50" role="doc-backlink">cp</a><a class="headerlink" href="#cp" title="Link to this heading"></a></h2>
+<span id="id8"></span><h3>cp<a class="headerlink" href="#cp" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Copies files and directories.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-r</cite>: Copy directories recursively.</p></li>
 <li><p><cite>-a</cite>: Archive mode (preserves attributes and follows symbolic links).</p></li>
@@ -299,10 +237,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="curl">
-<span id="id9"></span><h2><a class="toc-backref" href="#id51" role="doc-backlink">curl</a><a class="headerlink" href="#curl" title="Link to this heading"></a></h2>
+<span id="id9"></span><h3>curl<a class="headerlink" href="#curl" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Transfers data from or to a server using various protocols.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-O</cite>: Save the file with the remote file name.</p></li>
 <li><p><cite>-L</cite>: Follow redirects.</p></li>
@@ -316,10 +254,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="df">
-<span id="id10"></span><h2><a class="toc-backref" href="#id52" role="doc-backlink">df</a><a class="headerlink" href="#df" title="Link to this heading"></a></h2>
+<span id="id10"></span><h3>df<a class="headerlink" href="#df" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Displays disk space usage of file systems.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-h</cite>: Human-readable format.</p></li>
 <li><p><cite>-T</cite>: Display file system type.</p></li>
@@ -332,10 +270,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="diff">
-<span id="id11"></span><h2><a class="toc-backref" href="#id53" role="doc-backlink">diff</a><a class="headerlink" href="#diff" title="Link to this heading"></a></h2>
+<span id="id11"></span><h3>diff<a class="headerlink" href="#diff" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Compares files line by line.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-u</cite>: Unified format.</p></li>
 <li><p><cite>-c</cite>: Context format.</p></li>
@@ -349,10 +287,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="du">
-<span id="id12"></span><h2><a class="toc-backref" href="#id54" role="doc-backlink">du</a><a class="headerlink" href="#du" title="Link to this heading"></a></h2>
+<span id="id12"></span><h3>du<a class="headerlink" href="#du" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Estimates file space usage.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-h</cite>: Human-readable format.</p></li>
 <li><p><cite>-s</cite>: Display only the total size.</p></li>
@@ -366,10 +304,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="echo">
-<span id="id13"></span><h2><a class="toc-backref" href="#id55" role="doc-backlink">echo</a><a class="headerlink" href="#echo" title="Link to this heading"></a></h2>
+<span id="id13"></span><h3>echo<a class="headerlink" href="#echo" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Displays a line of text or a variable value.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-n</cite>: Do not output the trailing newline.</p></li>
 <li><p><cite>-e</cite>: Enable interpretation of backslash escapes.</p></li>
@@ -380,10 +318,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="find">
-<span id="id14"></span><h2><a class="toc-backref" href="#id56" role="doc-backlink">find</a><a class="headerlink" href="#find" title="Link to this heading"></a></h2>
+<span id="id14"></span><h3>find<a class="headerlink" href="#find" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Searches for files in a directory hierarchy.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-name</cite>: Search by file name.</p></li>
 <li><p><cite>-type</cite>: Search by file type (e.g., <cite>f</cite> for file, <cite>d</cite> for directory).</p></li>
@@ -397,10 +335,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="grep">
-<span id="id15"></span><h2><a class="toc-backref" href="#id57" role="doc-backlink">grep</a><a class="headerlink" href="#grep" title="Link to this heading"></a></h2>
+<span id="id15"></span><h3>grep<a class="headerlink" href="#grep" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Searches for patterns within files.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-i</cite>: Ignore case.</p></li>
 <li><p><cite>-r</cite>: Recursively search directories.</p></li>
@@ -414,10 +352,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="head">
-<span id="id16"></span><h2><a class="toc-backref" href="#id58" role="doc-backlink">head</a><a class="headerlink" href="#head" title="Link to this heading"></a></h2>
+<span id="id16"></span><h3>head<a class="headerlink" href="#head" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Outputs the first part of files.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-n</cite>: Number of lines to display.</p></li>
 <li><p><cite>-c</cite>: Number of bytes to display.</p></li>
@@ -429,10 +367,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="history">
-<span id="id17"></span><h2><a class="toc-backref" href="#id59" role="doc-backlink">history</a><a class="headerlink" href="#history" title="Link to this heading"></a></h2>
+<span id="id17"></span><h3>history<a class="headerlink" href="#history" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Displays or manipulates the command history.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-c</cite>: Clears the history list.</p></li>
 <li><p><cite>-d offset</cite>: Deletes the history entry at the specified offset.</p></li>
@@ -446,10 +384,10 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="kill">
-<span id="id18"></span><h2><a class="toc-backref" href="#id60" role="doc-backlink">kill</a><a class="headerlink" href="#kill" title="Link to this heading"></a></h2>
+<span id="id18"></span><h3>kill<a class="headerlink" href="#kill" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Sends a signal to a process.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-9</cite>: Sends the SIGKILL signal (forceful termination).</p></li>
 <li><p><cite>-l</cite>: Lists all signal names.</p></li>
@@ -462,62 +400,47 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="less">
-<span id="id19"></span><h2><a class="toc-backref" href="#id61" role="doc-backlink">less</a><a class="headerlink" href="#less" title="Link to this heading"></a></h2>
+<span id="id19"></span><h3>less<a class="headerlink" href="#less" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
-<p>Views file contents interactively, one screen at a time.</p>
-<p><strong>Arguments:</strong></p>
+<p>Views file contents one screen at a time.</p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
-<li><p><cite>-N</cite>: Displays line numbers.</p></li>
-<li><p><cite>-S</cite>: Prevents line wrapping.</p></li>
-<li><p><cite>-i</cite>: Ignores case in search.</p></li>
-<li><p><cite>-X</cite>: Disables clearing the screen when the command exits.</p></li>
+<li><p><cite>-N</cite>: Display line numbers.</p></li>
+<li><p><cite>-S</cite>: Chop long lines instead of wrapping them.</p></li>
+<li><p><cite>-G</cite>: Suppress the message about the end of file.</p></li>
+<li><p><cite>-F</cite>: Exit if the entire file can be displayed in one screen.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>less<span class="w"> </span>filename.txt
-</pre></div>
-</div>
-</section>
-<section id="ln">
-<span id="id20"></span><h2><a class="toc-backref" href="#id62" role="doc-backlink">ln</a><a class="headerlink" href="#ln" title="Link to this heading"></a></h2>
-<p><strong>Description:</strong></p>
-<p>Creates hard and symbolic links.</p>
-<p><strong>Arguments:</strong></p>
-<ul class="simple">
-<li><p><cite>-s</cite>: Creates a symbolic link.</p></li>
-<li><p><cite>-f</cite>: Forces the creation of the link, even if the target file already exists.</p></li>
-<li><p><cite>-v</cite>: Verbose mode, showing files being linked.</p></li>
-</ul>
-<p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ln<span class="w"> </span>-s<span class="w"> </span>/path/to/file<span class="w"> </span>/path/to/symlink
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>less<span class="w"> </span>file.txt
 </pre></div>
 </div>
 </section>
 <section id="ls">
-<span id="id21"></span><h2><a class="toc-backref" href="#id63" role="doc-backlink">ls</a><a class="headerlink" href="#ls" title="Link to this heading"></a></h2>
+<span id="id20"></span><h3>ls<a class="headerlink" href="#ls" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Lists directory contents.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-l</cite>: Long listing format.</p></li>
-<li><p><cite>-a</cite>: Includes hidden files.</p></li>
-<li><p><cite>-h</cite>: Human-readable sizes.</p></li>
-<li><p><cite>-r</cite>: Reverse order while sorting.</p></li>
+<li><p><cite>-a</cite>: Include hidden files.</p></li>
+<li><p><cite>-h</cite>: Human-readable file sizes.</p></li>
+<li><p><cite>-R</cite>: List directories recursively.</p></li>
 <li><p><cite>-t</cite>: Sort by modification time.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-la<span class="w"> </span>/path/to/directory
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-la<span class="w"> </span>/path
 </pre></div>
 </div>
 </section>
 <section id="man">
-<span id="id22"></span><h2><a class="toc-backref" href="#id64" role="doc-backlink">man</a><a class="headerlink" href="#man" title="Link to this heading"></a></h2>
+<span id="id21"></span><h3>man<a class="headerlink" href="#man" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Displays the manual page for a command.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
-<li><p><cite>-k</cite>: Searches for a command based on keywords.</p></li>
-<li><p><cite>-f</cite>: Displays a short description of the command.</p></li>
-<li><p><cite>-P pager</cite>: Specifies the pager to use for displaying the manual.</p></li>
+<li><p><cite>-k keyword</cite>: Search for a keyword in the manual page database.</p></li>
+<li><p><cite>-f command</cite>: Display a brief description of the command.</p></li>
+<li><p><cite>-a</cite>: Display all pages for the command.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>man<span class="w"> </span>ls
@@ -525,61 +448,58 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="mkdir">
-<span id="id23"></span><h2><a class="toc-backref" href="#id65" role="doc-backlink">mkdir</a><a class="headerlink" href="#mkdir" title="Link to this heading"></a></h2>
+<span id="id22"></span><h3>mkdir<a class="headerlink" href="#mkdir" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Creates directories.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
-<li><p><cite>-p</cite>: Creates parent directories as needed.</p></li>
-<li><p><cite>-v</cite>: Verbose mode, showing directories being created.</p></li>
-<li><p><cite>-m</cite>: Set file mode (as in <cite>chmod</cite>).</p></li>
+<li><p><cite>-p</cite>: Create parent directories as needed.</p></li>
+<li><p><cite>-m mode</cite>: Set the permissions for the directory.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>/path/to/new/directory
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>/path/to/directory
 </pre></div>
 </div>
 </section>
 <section id="mv">
-<span id="id24"></span><h2><a class="toc-backref" href="#id66" role="doc-backlink">mv</a><a class="headerlink" href="#mv" title="Link to this heading"></a></h2>
+<span id="id23"></span><h3>mv<a class="headerlink" href="#mv" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Moves or renames files and directories.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
-<li><p><cite>-i</cite>: Prompts before overwriting files.</p></li>
-<li><p><cite>-u</cite>: Moves only when the source file is newer.</p></li>
-<li><p><cite>-v</cite>: Verbose mode, showing files being moved.</p></li>
+<li><p><cite>-i</cite>: Prompt before overwrite.</p></li>
+<li><p><cite>-u</cite>: Move only when the source file is newer.</p></li>
+<li><p><cite>-v</cite>: Verbose mode.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>-v<span class="w"> </span>oldfile.txt<span class="w"> </span>newfile.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>oldfile.txt<span class="w"> </span>newfile.txt
 </pre></div>
 </div>
 </section>
-<section id="nc">
-<span id="id25"></span><h2><a class="toc-backref" href="#id67" role="doc-backlink">nc</a><a class="headerlink" href="#nc" title="Link to this heading"></a></h2>
+<section id="nano">
+<span id="id24"></span><h3>nano<a class="headerlink" href="#nano" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
-<p>Netcat is used for network diagnostics and debugging.</p>
-<p><strong>Arguments:</strong></p>
+<p>A simple text editor.</p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
-<li><p><cite>-l</cite>: Listen for incoming connections.</p></li>
-<li><p><cite>-p port</cite>: Specifies the port to listen on.</p></li>
-<li><p><cite>-v</cite>: Verbose mode.</p></li>
-<li><p><cite>-u</cite>: Use UDP instead of TCP.</p></li>
+<li><p><cite>-c</cite>: Display the current cursor position.</p></li>
+<li><p><cite>-m</cite>: Show mouse support.</p></li>
+<li><p><cite>-w</cite>: Disable wrapping of long lines.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nc<span class="w"> </span>-l<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>file.txt
 </pre></div>
 </div>
 </section>
 <section id="ping">
-<span id="id26"></span><h2><a class="toc-backref" href="#id68" role="doc-backlink">ping</a><a class="headerlink" href="#ping" title="Link to this heading"></a></h2>
+<span id="id25"></span><h3>ping<a class="headerlink" href="#ping" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Sends ICMP ECHO_REQUEST packets to network hosts.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
-<li><p><cite>-c count</cite>: Specifies the number of packets to send.</p></li>
-<li><p><cite>-i interval</cite>: Sets the interval between packets.</p></li>
-<li><p><cite>-t ttl</cite>: Sets the time-to-live for packets.</p></li>
-<li><p><cite>-s packetsize</cite>: Specifies the number of data bytes to send.</p></li>
+<li><p><cite>-c count</cite>: Stop after sending count ECHO_REQUEST packets.</p></li>
+<li><p><cite>-i interval</cite>: Wait interval seconds between sending each packet.</p></li>
+<li><p><cite>-t ttl</cite>: Set the IP Time To Live.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">4</span><span class="w"> </span>example.com
@@ -587,43 +507,29 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </div>
 </section>
 <section id="ps">
-<span id="id27"></span><h2><a class="toc-backref" href="#id69" role="doc-backlink">ps</a><a class="headerlink" href="#ps" title="Link to this heading"></a></h2>
+<span id="id26"></span><h3>ps<a class="headerlink" href="#ps" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
-<p>Displays information about active processes.</p>
-<p><strong>Arguments:</strong></p>
+<p>Reports a snapshot of current processes.</p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
-<li><p><cite>-e</cite>: Displays all processes.</p></li>
-<li><p><cite>-f</cite>: Full format listing.</p></li>
-<li><p><cite>-u user</cite>: Display processes for a specific user.</p></li>
-<li><p><cite>-l</cite>: Long format listing.</p></li>
+<li><p><cite>-e</cite>: Show all processes.</p></li>
+<li><p><cite>-f</cite>: Display full format listing.</p></li>
+<li><p><cite>-u user</cite>: Display processes for a specified user.</p></li>
+<li><p><cite>-aux</cite>: Show processes for all users.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps<span class="w"> </span>-ef
-</pre></div>
-</div>
-</section>
-<section id="pwd">
-<span id="id28"></span><h2><a class="toc-backref" href="#id70" role="doc-backlink">pwd</a><a class="headerlink" href="#pwd" title="Link to this heading"></a></h2>
-<p><strong>Description:</strong></p>
-<p>Prints the current working directory.</p>
-<p><strong>Arguments:</strong></p>
-<ul class="simple">
-<li><p><cite>-L</cite>: Print the value of $PWD if it contains a symbolic link.</p></li>
-<li><p><cite>-P</cite>: Print the physical directory, without following symbolic links.</p></li>
-</ul>
-<p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps<span class="w"> </span>-aux
 </pre></div>
 </div>
 </section>
 <section id="rm">
-<span id="id29"></span><h2><a class="toc-backref" href="#id71" role="doc-backlink">rm</a><a class="headerlink" href="#rm" title="Link to this heading"></a></h2>
+<span id="id27"></span><h3>rm<a class="headerlink" href="#rm" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Removes files or directories.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-r</cite>: Remove directories and their contents recursively.</p></li>
-<li><p><cite>-f</cite>: Force the removal of files, ignoring non-existent files.</p></li>
+<li><p><cite>-f</cite>: Force removal of files without prompting.</p></li>
 <li><p><cite>-i</cite>: Prompt before every removal.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
@@ -631,219 +537,114 @@ nano<span class="w"> </span>~/.bashrc<span class="w">          </span><span clas
 </pre></div>
 </div>
 </section>
-<section id="rmdir">
-<span id="id30"></span><h2><a class="toc-backref" href="#id72" role="doc-backlink">rmdir</a><a class="headerlink" href="#rmdir" title="Link to this heading"></a></h2>
-<p><strong>Description:</strong></p>
-<p>Removes empty directories.</p>
-<p><strong>Arguments:</strong></p>
-<ul class="simple">
-<li><p><cite>-p</cite>: Removes parent directories if they become empty.</p></li>
-</ul>
-<p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rmdir<span class="w"> </span>/path/to/empty/directory
-</pre></div>
-</div>
-</section>
 <section id="sed">
-<span id="id31"></span><h2><a class="toc-backref" href="#id73" role="doc-backlink">sed</a><a class="headerlink" href="#sed" title="Link to this heading"></a></h2>
+<span id="id28"></span><h3>sed<a class="headerlink" href="#sed" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Stream editor for filtering and transforming text.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
-<li><p><cite>-e script</cite>: Specifies the script to use.</p></li>
-<li><p><cite>-i[SUFFIX]</cite>: Edit files in place (with optional SUFFIX for backup).</p></li>
-<li><p><cite>-n</cite>: Suppresses automatic printing of pattern space.</p></li>
-<li><p><cite>-f script-file</cite>: Specifies a file containing the script to run.</p></li>
+<li><p><cite>-e script</cite>: Specify a script to be executed.</p></li>
+<li><p><cite>-i[SUFFIX]</cite>: Edit files in place (with optional backup suffix).</p></li>
+<li><p><cite>-n</cite>: Suppress automatic printing of pattern space.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/oldtext/newtext/&#39;</span><span class="w"> </span>file.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>file.txt
 </pre></div>
 </div>
 </section>
 <section id="sort">
-<span id="id32"></span><h2><a class="toc-backref" href="#id74" role="doc-backlink">sort</a><a class="headerlink" href="#sort" title="Link to this heading"></a></h2>
+<span id="id29"></span><h3>sort<a class="headerlink" href="#sort" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Sorts lines of text files.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
-<li><p><cite>-r</cite>: Reverse the order of the sort.</p></li>
-<li><p><cite>-n</cite>: Sort numerically.</p></li>
-<li><p><cite>-k</cite>: Sort by a specific key/column.</p></li>
-<li><p><cite>-u</cite>: Output only the first of an equal run.</p></li>
+<li><p><cite>-n</cite>: Compare according to numerical value.</p></li>
+<li><p><cite>-r</cite>: Reverse the result of comparisons.</p></li>
+<li><p><cite>-k FIELD</cite>: Sort by the specified field.</p></li>
+<li><p><cite>-u</cite>: Suppress duplicate lines.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sort<span class="w"> </span>-n<span class="w"> </span>file.txt
 </pre></div>
 </div>
 </section>
-<section id="ssh">
-<span id="id33"></span><h2><a class="toc-backref" href="#id75" role="doc-backlink">ssh</a><a class="headerlink" href="#ssh" title="Link to this heading"></a></h2>
-<p><strong>Description:</strong></p>
-<p>Securely connects to a remote machine.</p>
-<p><strong>Arguments:</strong></p>
-<ul class="simple">
-<li><p><cite>-i file</cite>: Specify the private key file for authentication.</p></li>
-<li><p><cite>-p port</cite>: Specify the port to connect to.</p></li>
-<li><p><cite>-l user</cite>: Specify the remote user.</p></li>
-</ul>
-<p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_rsa<span class="w"> </span>user@remote.host
-</pre></div>
-</div>
-</section>
 <section id="tail">
-<span id="id34"></span><h2><a class="toc-backref" href="#id76" role="doc-backlink">tail</a><a class="headerlink" href="#tail" title="Link to this heading"></a></h2>
+<span id="id30"></span><h3>tail<a class="headerlink" href="#tail" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Outputs the last part of files.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
-<li><p><cite>-n</cite>: Number of lines to display from the end of the file. (e.g., <cite>-n 10</cite> for the last 10 lines)</p></li>
-<li><p><cite>-c</cite>: Number of bytes to display from the end of the file. (e.g., <cite>-c 100</cite> for the last 100 bytes)</p></li>
-<li><p><cite>-f</cite>: Follow the file as it grows, useful for monitoring log files in real time.</p></li>
-<li><p><cite>-q</cite>: Suppress the output of headers when displaying multiple files.</p></li>
+<li><p><cite>-n</cite>: Number of lines to display from the end of the file.</p></li>
+<li><p><cite>-f</cite>: Follow the end of the file as it grows.</p></li>
+<li><p><cite>-c</cite>: Number of bytes to display from the end of the file.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span>file.txt<span class="w">       </span><span class="c1"># Displays the last 10 lines of file.txt</span>
-tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w">    </span><span class="c1"># Continuously monitors and displays new lines added to /var/log/syslog</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog
 </pre></div>
 </div>
 </section>
 <section id="tar">
-<span id="id35"></span><h2><a class="toc-backref" href="#id77" role="doc-backlink">tar</a><a class="headerlink" href="#tar" title="Link to this heading"></a></h2>
+<span id="id31"></span><h3>tar<a class="headerlink" href="#tar" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
-<p>Archives files and directories.</p>
-<p><strong>Arguments:</strong></p>
+<p>Archives files.</p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
 <li><p><cite>-c</cite>: Create a new archive.</p></li>
 <li><p><cite>-x</cite>: Extract files from an archive.</p></li>
-<li><p><cite>-f</cite>: Specify the filename of the archive.</p></li>
+<li><p><cite>-f file</cite>: Use the archive file specified.</p></li>
 <li><p><cite>-v</cite>: Verbose mode.</p></li>
 <li><p><cite>-z</cite>: Compress the archive using gzip.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>-czvf<span class="w"> </span>archive.tar.gz<span class="w"> </span>/path/to/directory
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>-cvzf<span class="w"> </span>archive.tar.gz<span class="w"> </span>/path/to/directory
+</pre></div>
+</div>
+</section>
+<section id="top">
+<span id="id32"></span><h3>top<a class="headerlink" href="#top" title="Link to this heading"></a></h3>
+<p><strong>Description:</strong></p>
+<p>Displays real-time system information and processes.</p>
+<p><strong>Flags and Options:</strong></p>
+<ul class="simple">
+<li><p><cite>-d delay</cite>: Set the delay between updates.</p></li>
+<li><p><cite>-n number</cite>: Number of iterations before exiting.</p></li>
+<li><p><cite>-b</cite>: Batch mode operation.</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>top<span class="w"> </span>-d<span class="w"> </span><span class="m">5</span>
 </pre></div>
 </div>
 </section>
 <section id="touch">
-<span id="id36"></span><h2><a class="toc-backref" href="#id78" role="doc-backlink">touch</a><a class="headerlink" href="#touch" title="Link to this heading"></a></h2>
+<span id="id33"></span><h3>touch<a class="headerlink" href="#touch" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
 <p>Changes file timestamps or creates empty files.</p>
-<p><strong>Arguments:</strong></p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
-<li><p><cite>-c</cite>: Do not create any files.</p></li>
-<li><p><cite>-d</cite>: Set the file’s timestamp to a specific time.</p></li>
-<li><p><cite>-t</cite>: Set the file’s timestamp using a specific format.</p></li>
+<li><p><cite>-a</cite>: Change the access time only.</p></li>
+<li><p><cite>-m</cite>: Change the modification time only.</p></li>
+<li><p><cite>-t</cite>: Use the specified timestamp.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>newfile.txt
-</pre></div>
-</div>
-</section>
-<section id="uname">
-<span id="id37"></span><h2><a class="toc-backref" href="#id79" role="doc-backlink">uname</a><a class="headerlink" href="#uname" title="Link to this heading"></a></h2>
-<p><strong>Description:</strong></p>
-<p>Prints system information.</p>
-<p><strong>Arguments:</strong></p>
-<ul class="simple">
-<li><p><cite>-a</cite>: Prints all available system information.</p></li>
-<li><p><cite>-r</cite>: Prints the kernel version.</p></li>
-<li><p><cite>-s</cite>: Prints the kernel name.</p></li>
-<li><p><cite>-m</cite>: Prints the machine hardware name.</p></li>
-</ul>
-<p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uname<span class="w"> </span>-a
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>file.txt
 </pre></div>
 </div>
 </section>
 <section id="wget">
-<span id="id38"></span><h2><a class="toc-backref" href="#id80" role="doc-backlink">wget</a><a class="headerlink" href="#wget" title="Link to this heading"></a></h2>
+<span id="id34"></span><h3>wget<a class="headerlink" href="#wget" title="Link to this heading"></a></h3>
 <p><strong>Description:</strong></p>
-<p>Downloads files from the web.</p>
-<p><strong>Arguments:</strong></p>
+<p>Non-interactive network downloader.</p>
+<p><strong>Flags and Options:</strong></p>
 <ul class="simple">
-<li><p><cite>-O file</cite>: Save the downloaded file as <cite>file</cite>.</p></li>
-<li><p><cite>-r</cite>: Recursive download.</p></li>
-<li><p><cite>-N</cite>: Download only newer files.</p></li>
-<li><p><cite>-P directory</cite>: Save files to <cite>directory</cite>.</p></li>
+<li><p><cite>-O file</cite>: Save the downloaded content to the specified file.</p></li>
+<li><p><cite>-r</cite>: Download files recursively.</p></li>
+<li><p><cite>-p</cite>: Download all necessary files for displaying HTML pages.</p></li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>-O<span class="w"> </span>file.txt<span class="w"> </span>http://example.com/file.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>-O<span class="w"> </span>output.html<span class="w"> </span>http://example.com
 </pre></div>
 </div>
 </section>
-<section id="which">
-<span id="id39"></span><h2><a class="toc-backref" href="#id81" role="doc-backlink">which</a><a class="headerlink" href="#which" title="Link to this heading"></a></h2>
-<p><strong>Description:</strong></p>
-<p>Shows the full path of shell commands.</p>
-<p><strong>Arguments:</strong></p>
-<ul class="simple">
-<li><p><cite>–skip-alias</cite>: Skip alias lookups.</p></li>
-<li><p><cite>–skip-functions</cite>: Skip function lookups.</p></li>
-<li><p><cite>–skip-builtins</cite>: Skip built-in commands.</p></li>
-</ul>
-<p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>which<span class="w"> </span>ls
-</pre></div>
-</div>
-</section>
-<section id="whoami">
-<span id="id40"></span><h2><a class="toc-backref" href="#id82" role="doc-backlink">whoami</a><a class="headerlink" href="#whoami" title="Link to this heading"></a></h2>
-<p><strong>Description:</strong></p>
-<p>Displays the current logged-in username.</p>
-<p><strong>Arguments:</strong></p>
-<ul class="simple">
-<li><p>(No arguments are used with this command.)</p></li>
-</ul>
-<p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>whoami
-</pre></div>
-</div>
-</section>
-<section id="xargs">
-<span id="id41"></span><h2><a class="toc-backref" href="#id83" role="doc-backlink">xargs</a><a class="headerlink" href="#xargs" title="Link to this heading"></a></h2>
-<p><strong>Description:</strong></p>
-<p>Builds and executes command lines from standard input.</p>
-<p><strong>Arguments:</strong></p>
-<ul class="simple">
-<li><p><cite>-n max-args</cite>: Use at most <cite>max-args</cite> arguments per command line.</p></li>
-<li><p><cite>-p</cite>: Prompt before running each command line.</p></li>
-<li><p><cite>-I replace-str</cite>: Replace occurrences of <cite>replace-str</cite> in the command line with input.</p></li>
-</ul>
-<p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>/path<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>wc<span class="w"> </span>-l
-</pre></div>
-</div>
-</section>
-<section id="zip">
-<span id="id42"></span><h2><a class="toc-backref" href="#id84" role="doc-backlink">zip</a><a class="headerlink" href="#zip" title="Link to this heading"></a></h2>
-<p><strong>Description:</strong></p>
-<p>Package and compress files into a ZIP archive.</p>
-<p><strong>Arguments:</strong></p>
-<ul class="simple">
-<li><p><cite>-r</cite>: Recursively add files.</p></li>
-<li><p><cite>-u</cite>: Update files in the ZIP archive.</p></li>
-<li><p><cite>-x</cite>: Exclude files from the ZIP archive.</p></li>
-</ul>
-<p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zip<span class="w"> </span>-r<span class="w"> </span>archive.zip<span class="w"> </span>/path/to/directory
-</pre></div>
-</div>
-</section>
-<section id="zsh">
-<span id="id43"></span><h2><a class="toc-backref" href="#id85" role="doc-backlink">zsh</a><a class="headerlink" href="#zsh" title="Link to this heading"></a></h2>
-<p><strong>Description:</strong></p>
-<p>An interactive shell with scripting capabilities.</p>
-<p><strong>Arguments:</strong></p>
-<ul class="simple">
-<li><p><cite>-c command</cite>: Execute a command and exit.</p></li>
-<li><p><cite>-i</cite>: Start an interactive shell.</p></li>
-<li><p><cite>-l</cite>: Start a login shell.</p></li>
-</ul>
-<p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zsh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo Hello, World!&#39;</span>
-</pre></div>
-</div>
 </section>
 </section>
 

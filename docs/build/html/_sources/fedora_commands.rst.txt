@@ -5,6 +5,31 @@ Fedora Commands
    :local:
    :depth: 1
 
+Command Structure
+-----------------
+
+.. code-block::
+
+    command [-flag(s)] [-option(s) [value]] [argument(s)]
+
+Definitions
+------------
+
+**Flags:**
+Flags are single-letter options prefixed by a hyphen (`-`). They typically do not require a value and are used to enable or disable features of the command.
+
+**Options:**
+Options are more descriptive parameters prefixed by one or two hyphens (`-` or `--`). They usually take a value to modify the behavior of the command.
+
+**Values:**
+Values are the data provided to options. They can be arguments, numbers, or text that configure how the command operates.
+
+**Arguments:**
+Arguments are inputs to the command, such as filenames, directories, or other data the command will process.
+
+**Examples:**
+For the command ``command -f -v value argument``, ``-f`` is a flag, ``-v``` is an option with the value ``value``, and ``argument`` is an argument.
+
 .. _~:
 
 ~
@@ -20,7 +45,7 @@ The ``~`` symbol represents the home directory of the current user. It provides 
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    cd ~/Documents          # Changes directory to the Documents folder in the current user's home directory
    ls ~/.config            # Lists files in the .config directory of the current user's home directory
@@ -36,7 +61,7 @@ awk
 
 A powerful text processing tool that allows for pattern scanning and processing.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-F fs`: Specifies the input field separator.
 - `-v var=value`: Assigns a value to a variable.
@@ -45,10 +70,9 @@ A powerful text processing tool that allows for pattern scanning and processing.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    awk -F: '{ print $1 }' /etc/passwd
-
 
 .. _cat:
 
@@ -59,7 +83,7 @@ cat
 
 Concatenates and displays the contents of files.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-n`: Number all output lines.
 - `-b`: Number non-blank output lines.
@@ -68,10 +92,9 @@ Concatenates and displays the contents of files.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    cat -n filename.txt
-
 
 .. _cd:
 
@@ -82,17 +105,16 @@ cd
 
 Changes the current directory.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-P`: Use the physical directory structure without following symbolic links.
 - `-L`: Use the logical directory structure with symbolic links.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    cd /home/user
-
 
 .. _chmod:
 
@@ -103,7 +125,7 @@ chmod
 
 Changes the file modes or Access Control Lists (ACLs) of files.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-R`: Change files and directories recursively.
 - `-v`: Verbose mode.
@@ -112,10 +134,9 @@ Changes the file modes or Access Control Lists (ACLs) of files.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    chmod -R 755 /path/to/directory
-
 
 .. _chown:
 
@@ -126,7 +147,7 @@ chown
 
 Changes the ownership of files and directories.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-R`: Operates on files and directories recursively.
 - `-f`: Suppress most error messages.
@@ -135,10 +156,9 @@ Changes the ownership of files and directories.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    chown -R user:group /path/to/directory
-
 
 .. _cp:
 
@@ -149,7 +169,7 @@ cp
 
 Copies files and directories.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-r`: Copy directories recursively.
 - `-a`: Archive mode (preserves attributes and follows symbolic links).
@@ -158,10 +178,9 @@ Copies files and directories.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    cp -r /source/directory /destination/directory
-
 
 .. _curl:
 
@@ -172,7 +191,7 @@ curl
 
 Transfers data from or to a server using various protocols.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-O`: Save the file with the remote file name.
 - `-L`: Follow redirects.
@@ -182,10 +201,9 @@ Transfers data from or to a server using various protocols.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    curl -O http://example.com/file.txt
-
 
 .. _df:
 
@@ -196,7 +214,7 @@ df
 
 Displays disk space usage of file systems.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-h`: Human-readable format.
 - `-T`: Display file system type.
@@ -205,10 +223,9 @@ Displays disk space usage of file systems.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    df -h /
-
 
 .. _diff:
 
@@ -219,7 +236,7 @@ diff
 
 Compares files line by line.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-u`: Unified format.
 - `-c`: Context format.
@@ -229,10 +246,9 @@ Compares files line by line.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    diff -u file1.txt file2.txt
-
 
 .. _du:
 
@@ -243,7 +259,7 @@ du
 
 Estimates file space usage.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-h`: Human-readable format.
 - `-s`: Display only the total size.
@@ -253,10 +269,9 @@ Estimates file space usage.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    du -sh /path/to/directory
-
 
 .. _echo:
 
@@ -267,17 +282,16 @@ echo
 
 Displays a line of text or a variable value.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-n`: Do not output the trailing newline.
 - `-e`: Enable interpretation of backslash escapes.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    echo "Hello, World!"
-
 
 .. _find:
 
@@ -288,7 +302,7 @@ find
 
 Searches for files in a directory hierarchy.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-name`: Search by file name.
 - `-type`: Search by file type (e.g., `f` for file, `d` for directory).
@@ -298,10 +312,9 @@ Searches for files in a directory hierarchy.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    find /path -name "*.txt"
-
 
 .. _grep:
 
@@ -312,7 +325,7 @@ grep
 
 Searches for patterns within files.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-i`: Ignore case.
 - `-r`: Recursively search directories.
@@ -322,10 +335,9 @@ Searches for patterns within files.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    grep -i "search_term" file.txt
-
 
 .. _head:
 
@@ -336,7 +348,7 @@ head
 
 Outputs the first part of files.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-n`: Number of lines to display.
 - `-c`: Number of bytes to display.
@@ -344,10 +356,9 @@ Outputs the first part of files.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    head -n 10 file.txt
-
 
 .. _history:
 
@@ -358,7 +369,7 @@ history
 
 Displays or manipulates the command history.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-c`: Clears the history list.
 - `-d offset`: Deletes the history entry at the specified offset.
@@ -368,20 +379,20 @@ Displays or manipulates the command history.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    history | grep "search_term"
-
 
 .. _kill:
 
 kill
 ~~~~~
+
 **Description:**
 
 Sends a signal to a process.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-9`: Sends the SIGKILL signal (forceful termination).
 - `-l`: Lists all signal names.
@@ -390,10 +401,9 @@ Sends a signal to a process.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    kill -9 1234
-
 
 .. _less:
 
@@ -402,67 +412,43 @@ less
 
 **Description:**
 
-Views file contents interactively, one screen at a time.
+Views file contents one screen at a time.
 
-**Arguments:**
+**Flags and Options:**
 
-- `-N`: Displays line numbers.
-- `-S`: Prevents line wrapping.
-- `-i`: Ignores case in search.
-- `-X`: Disables clearing the screen when the command exits.
-
-**Example:**
-
-.. code:: bash
-
-   less filename.txt
-
-
-.. _ln:
-
-ln
-~~~~
-
-**Description:**
-
-Creates hard and symbolic links.
-
-**Arguments:**
-
-- `-s`: Creates a symbolic link.
-- `-f`: Forces the creation of the link, even if the target file already exists.
-- `-v`: Verbose mode, showing files being linked.
+- `-N`: Display line numbers.
+- `-S`: Chop long lines instead of wrapping them.
+- `-G`: Suppress the message about the end of file.
+- `-F`: Exit if the entire file can be displayed in one screen.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
-   ln -s /path/to/file /path/to/symlink
-
+   less file.txt
 
 .. _ls:
 
 ls
-~~~~
+~~~
 
 **Description:**
 
 Lists directory contents.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-l`: Long listing format.
-- `-a`: Includes hidden files.
-- `-h`: Human-readable sizes.
-- `-r`: Reverse order while sorting.
+- `-a`: Include hidden files.
+- `-h`: Human-readable file sizes.
+- `-R`: List directories recursively.
 - `-t`: Sort by modification time.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
-   ls -la /path/to/directory
-
+   ls -la /path
 
 .. _man:
 
@@ -473,108 +459,100 @@ man
 
 Displays the manual page for a command.
 
-**Arguments:**
+**Flags and Options:**
 
-- `-k`: Searches for a command based on keywords.
-- `-f`: Displays a short description of the command.
-- `-P pager`: Specifies the pager to use for displaying the manual.
+- `-k keyword`: Search for a keyword in the manual page database.
+- `-f command`: Display a brief description of the command.
+- `-a`: Display all pages for the command.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    man ls
-
 
 .. _mkdir:
 
 mkdir
-~~~~~~
+~~~~~~~
 
 **Description:**
 
 Creates directories.
 
-**Arguments:**
+**Flags and Options:**
 
-- `-p`: Creates parent directories as needed.
-- `-v`: Verbose mode, showing directories being created.
-- `-m`: Set file mode (as in `chmod`).
+- `-p`: Create parent directories as needed.
+- `-m mode`: Set the permissions for the directory.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
-   mkdir -p /path/to/new/directory
-
+   mkdir -p /path/to/directory
 
 .. _mv:
 
 mv
-~~~~
+~~~
 
 **Description:**
 
 Moves or renames files and directories.
 
-**Arguments:**
+**Flags and Options:**
 
-- `-i`: Prompts before overwriting files.
-- `-u`: Moves only when the source file is newer.
-- `-v`: Verbose mode, showing files being moved.
+- `-i`: Prompt before overwrite.
+- `-u`: Move only when the source file is newer.
+- `-v`: Verbose mode.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
-   mv -v oldfile.txt newfile.txt
+   mv oldfile.txt newfile.txt
 
+.. _nano:
 
-.. _nc:
-
-nc
-~~~~
+nano
+~~~~~~
 
 **Description:**
 
-Netcat is used for network diagnostics and debugging.
+A simple text editor.
 
-**Arguments:**
+**Flags and Options:**
 
-- `-l`: Listen for incoming connections.
-- `-p port`: Specifies the port to listen on.
-- `-v`: Verbose mode.
-- `-u`: Use UDP instead of TCP.
+- `-c`: Display the current cursor position.
+- `-m`: Show mouse support.
+- `-w`: Disable wrapping of long lines.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
-   nc -l -p 1234
-
+   nano file.txt
 
 .. _ping:
 
 ping
-~~~~~
+~~~~~~
 
 **Description:**
 
 Sends ICMP ECHO_REQUEST packets to network hosts.
 
-**Arguments:**
+**Flags and Options:**
 
-- `-c count`: Specifies the number of packets to send.
-- `-i interval`: Sets the interval between packets.
-- `-t ttl`: Sets the time-to-live for packets.
-- `-s packetsize`: Specifies the number of data bytes to send.
+- `-c count`: Stop after sending count ECHO_REQUEST packets.
+- `-i interval`: Wait interval seconds between sending each packet.
+- `-t ttl`: Set the IP Time To Live.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    ping -c 4 example.com
-
 
 .. _ps:
 
@@ -583,107 +561,62 @@ ps
 
 **Description:**
 
-Displays information about active processes.
+Reports a snapshot of current processes.
 
-**Arguments:**
+**Flags and Options:**
 
-- `-e`: Displays all processes.
-- `-f`: Full format listing.
-- `-u user`: Display processes for a specific user.
-- `-l`: Long format listing.
-
-**Example:**
-
-.. code:: bash
-
-   ps -ef
-
-
-.. _pwd:
-
-pwd
-~~~~
-
-**Description:**
-
-Prints the current working directory.
-
-**Arguments:**
-
-- `-L`: Print the value of $PWD if it contains a symbolic link.
-- `-P`: Print the physical directory, without following symbolic links.
+- `-e`: Show all processes.
+- `-f`: Display full format listing.
+- `-u user`: Display processes for a specified user.
+- `-aux`: Show processes for all users.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
-   pwd
-
+   ps -aux
 
 .. _rm:
 
 rm
-~~~~
+~~~
 
 **Description:**
 
 Removes files or directories.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-r`: Remove directories and their contents recursively.
-- `-f`: Force the removal of files, ignoring non-existent files.
+- `-f`: Force removal of files without prompting.
 - `-i`: Prompt before every removal.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    rm -rf /path/to/directory
-
-
-.. _rmdir:
-
-rmdir
-~~~~~~
-
-**Description:**
-
-Removes empty directories.
-
-**Arguments:**
-
-- `-p`: Removes parent directories if they become empty.
-
-**Example:**
-
-.. code:: bash
-
-   rmdir /path/to/empty/directory
-
 
 .. _sed:
 
 sed
-~~~~
+~~~~~
 
 **Description:**
 
 Stream editor for filtering and transforming text.
 
-**Arguments:**
+**Flags and Options:**
 
-- `-e script`: Specifies the script to use.
-- `-i[SUFFIX]`: Edit files in place (with optional SUFFIX for backup).
-- `-n`: Suppresses automatic printing of pattern space.
-- `-f script-file`: Specifies a file containing the script to run.
+- `-e script`: Specify a script to be executed.
+- `-i[SUFFIX]`: Edit files in place (with optional backup suffix).
+- `-n`: Suppress automatic printing of pattern space.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
-   sed -i 's/oldtext/newtext/' file.txt
-
+   sed -i 's/old/new/g' file.txt
 
 .. _sort:
 
@@ -694,134 +627,104 @@ sort
 
 Sorts lines of text files.
 
-**Arguments:**
+**Flags and Options:**
 
-- `-r`: Reverse the order of the sort.
-- `-n`: Sort numerically.
-- `-k`: Sort by a specific key/column.
-- `-u`: Output only the first of an equal run.
+- `-n`: Compare according to numerical value.
+- `-r`: Reverse the result of comparisons.
+- `-k FIELD`: Sort by the specified field.
+- `-u`: Suppress duplicate lines.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
    sort -n file.txt
-
-
-.. _ssh:
-
-ssh
-~~~~
-
-**Description:**
-
-Securely connects to a remote machine.
-
-**Arguments:**
-
-- `-i file`: Specify the private key file for authentication.
-- `-p port`: Specify the port to connect to.
-- `-l user`: Specify the remote user.
-
-**Example:**
-
-.. code:: bash
-
-   ssh -i ~/.ssh/id_rsa user@remote.host
-
 
 .. _tail:
 
 tail
-~~~~
+~~~~~
 
 **Description:**
 
 Outputs the last part of files.
 
-**Arguments:**
+**Flags and Options:**
 
-- `-n`: Number of lines to display from the end of the file. (e.g., `-n 10` for the last 10 lines)
-- `-c`: Number of bytes to display from the end of the file. (e.g., `-c 100` for the last 100 bytes)
-- `-f`: Follow the file as it grows, useful for monitoring log files in real time.
-- `-q`: Suppress the output of headers when displaying multiple files.
+- `-n`: Number of lines to display from the end of the file.
+- `-f`: Follow the end of the file as it grows.
+- `-c`: Number of bytes to display from the end of the file.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
-   tail -n 10 file.txt       # Displays the last 10 lines of file.txt
-   tail -f /var/log/syslog    # Continuously monitors and displays new lines added to /var/log/syslog
-
+   tail -f /var/log/syslog
 
 .. _tar:
 
 tar
-~~~~
+~~~~~
 
 **Description:**
 
-Archives files and directories.
+Archives files.
 
-**Arguments:**
+**Flags and Options:**
 
 - `-c`: Create a new archive.
 - `-x`: Extract files from an archive.
-- `-f`: Specify the filename of the archive.
+- `-f file`: Use the archive file specified.
 - `-v`: Verbose mode.
 - `-z`: Compress the archive using gzip.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
-   tar -czvf archive.tar.gz /path/to/directory
+   tar -cvzf archive.tar.gz /path/to/directory
 
+.. _top:
+
+top
+~~~
+
+**Description:**
+
+Displays real-time system information and processes.
+
+**Flags and Options:**
+
+- `-d delay`: Set the delay between updates.
+- `-n number`: Number of iterations before exiting.
+- `-b`: Batch mode operation.
+
+**Example:**
+
+.. code-block:: bash
+
+   top -d 5
 
 .. _touch:
 
 touch
-~~~~~~
+~~~~~~~
 
 **Description:**
 
 Changes file timestamps or creates empty files.
 
-**Arguments:**
+**Flags and Options:**
 
-- `-c`: Do not create any files.
-- `-d`: Set the file’s timestamp to a specific time.
-- `-t`: Set the file’s timestamp using a specific format.
-
-**Example:**
-
-.. code:: bash
-
-   touch newfile.txt
-
-
-.. _uname:
-
-uname
-~~~~~~
-
-**Description:**
-
-Prints system information.
-
-**Arguments:**
-
-- `-a`: Prints all available system information.
-- `-r`: Prints the kernel version.
-- `-s`: Prints the kernel name.
-- `-m`: Prints the machine hardware name.
+- `-a`: Change the access time only.
+- `-m`: Change the modification time only.
+- `-t`: Use the specified timestamp.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
-   uname -a
-
+   touch file.txt
 
 .. _wget:
 
@@ -830,125 +733,16 @@ wget
 
 **Description:**
 
-Downloads files from the web.
+Non-interactive network downloader.
 
-**Arguments:**
+**Flags and Options:**
 
-- `-O file`: Save the downloaded file as `file`.
-- `-r`: Recursive download.
-- `-N`: Download only newer files.
-- `-P directory`: Save files to `directory`.
-
-**Example:**
-
-.. code:: bash
-
-   wget -O file.txt http://example.com/file.txt
-
-
-.. _which:
-
-which
-~~~~~~
-
-**Description:**
-
-Shows the full path of shell commands.
-
-**Arguments:**
-
-- `--skip-alias`: Skip alias lookups.
-- `--skip-functions`: Skip function lookups.
-- `--skip-builtins`: Skip built-in commands.
+- `-O file`: Save the downloaded content to the specified file.
+- `-r`: Download files recursively.
+- `-p`: Download all necessary files for displaying HTML pages.
 
 **Example:**
 
-.. code:: bash
+.. code-block:: bash
 
-   which ls
-
-
-.. _whoami:
-
-whoami
-~~~~~~~
-
-**Description:**
-
-Displays the current logged-in username.
-
-**Arguments:**
-
-- (No arguments are used with this command.)
-
-**Example:**
-
-.. code:: bash
-
-   whoami
-
-
-.. _xargs:
-
-xargs
-~~~~~~
-
-**Description:**
-
-Builds and executes command lines from standard input.
-
-**Arguments:**
-
-- `-n max-args`: Use at most `max-args` arguments per command line.
-- `-p`: Prompt before running each command line.
-- `-I replace-str`: Replace occurrences of `replace-str` in the command line with input.
-
-**Example:**
-
-.. code:: bash
-
-   find /path -type f | xargs wc -l
-
-
-.. _zip:
-
-zip
-~~~~
-
-**Description:**
-
-Package and compress files into a ZIP archive.
-
-**Arguments:**
-
-- `-r`: Recursively add files.
-- `-u`: Update files in the ZIP archive.
-- `-x`: Exclude files from the ZIP archive.
-
-**Example:**
-
-.. code:: bash
-
-   zip -r archive.zip /path/to/directory
-
-
-.. _zsh:
-
-zsh
-~~~~
-
-**Description:**
-
-An interactive shell with scripting capabilities.
-
-**Arguments:**
-
-- `-c command`: Execute a command and exit.
-- `-i`: Start an interactive shell.
-- `-l`: Start a login shell.
-
-**Example:**
-
-.. code:: bash
-
-   zsh -c 'echo Hello, World!'
+   wget -O output.html http://example.com
