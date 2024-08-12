@@ -5,6 +5,28 @@ Fedora Commands
    :local:
    :depth: 1
 
+.. _~:
+
+~
+~~~
+**Description:**
+
+The ``~`` symbol represents the home directory of the current user. It provides a shorthand way to reference files and directories located in this directory.
+
+**Arguments:**
+
+- `~`: Refers to the current user's home directory (e.g., `/home/username`).
+- `~username`: Refers to the home directory of a specified user (e.g., `/home/otheruser`).
+
+**Example:**
+
+.. code:: bash
+
+   cd ~/Documents          # Changes directory to the Documents folder in the current user's home directory
+   ls ~/.config            # Lists files in the .config directory of the current user's home directory
+   cp ~/file.txt /tmp/     # Copies file.txt from the current user's home directory to /tmp
+   nano ~/.bashrc          # Edits the .bashrc file in the current user's home directory
+
 .. _awk:
 
 awk
@@ -706,6 +728,30 @@ Securely connects to a remote machine.
 .. code:: bash
 
    ssh -i ~/.ssh/id_rsa user@remote.host
+
+
+.. _tail:
+
+tail
+~~~~
+
+**Description:**
+
+Outputs the last part of files.
+
+**Arguments:**
+
+- `-n`: Number of lines to display from the end of the file. (e.g., `-n 10` for the last 10 lines)
+- `-c`: Number of bytes to display from the end of the file. (e.g., `-c 100` for the last 100 bytes)
+- `-f`: Follow the file as it grows, useful for monitoring log files in real time.
+- `-q`: Suppress the output of headers when displaying multiple files.
+
+**Example:**
+
+.. code:: bash
+
+   tail -n 10 file.txt       # Displays the last 10 lines of file.txt
+   tail -f /var/log/syslog    # Continuously monitors and displays new lines added to /var/log/syslog
 
 
 .. _tar:
