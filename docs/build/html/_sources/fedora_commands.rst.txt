@@ -730,6 +730,30 @@ Securely connects to a remote machine.
    ssh -i ~/.ssh/id_rsa user@remote.host
 
 
+.. _tail:
+
+tail
+~~~~
+
+**Description:**
+
+Outputs the last part of files.
+
+**Arguments:**
+
+- `-n`: Number of lines to display from the end of the file. (e.g., `-n 10` for the last 10 lines)
+- `-c`: Number of bytes to display from the end of the file. (e.g., `-c 100` for the last 100 bytes)
+- `-f`: Follow the file as it grows, useful for monitoring log files in real time.
+- `-q`: Suppress the output of headers when displaying multiple files.
+
+**Example:**
+
+.. code:: bash
+
+   tail -n 10 file.txt       # Displays the last 10 lines of file.txt
+   tail -f /var/log/syslog    # Continuously monitors and displays new lines added to /var/log/syslog
+
+
 .. _tar:
 
 tar
