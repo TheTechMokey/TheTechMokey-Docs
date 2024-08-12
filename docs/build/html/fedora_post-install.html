@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fedora Post Install - Terminal &mdash; The Tech Mokey 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Hardware" href="hardware.html" />
+    <link rel="prev" title="Install and Setup Fedora 40 Workstation" href="install_fedora_40.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            The Tech Mokey
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="network_infrastructure.html">Network Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_infrastructure.html">Server Infrastructure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="operating_systems.html">Operating Systems</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="operating_systems.html#fedora-40-workstation">Fedora 40 Workstation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="install_fedora_40.html">Install and Setup Fedora 40 Workstation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Fedora Post Install - Terminal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#set-hostname">Set Hostname</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rpm-fusion">RPM Fusion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nvidia-drivers-if-applicable">NVIDIA Drivers - If Applicable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#media-codecs">Media Codecs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#network-manager-wait-online-service">Network Manager Wait Online Service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gnome-software-startup">Gnome Software Startup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reboot">Reboot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">The Tech Mokey</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="operating_systems.html">Operating Systems</a></li>
+      <li class="breadcrumb-item active">Fedora Post Install - Terminal</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/fedora_post-install.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fedora-post-install-terminal">
+<h1>Fedora Post Install - Terminal<a class="headerlink" href="#fedora-post-install-terminal" title="Link to this heading"></a></h1>
+<section id="set-hostname">
+<h2>Set Hostname<a class="headerlink" href="#set-hostname" title="Link to this heading"></a></h2>
+<p>Set your device’s Hostname, Replace HOSTNAME with your hostname</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>HOSTNAME
+</pre></div>
+</div>
+</section>
+<section id="rpm-fusion">
+<h2>RPM Fusion<a class="headerlink" href="#rpm-fusion" title="Link to this heading"></a></h2>
+<p>Install RPM Fustion Repository</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-<span class="k">$(</span>rpm<span class="w"> </span>-E<span class="w"> </span>%fedora<span class="k">)</span>.noarch.rpm<span class="w"> </span>https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-<span class="k">$(</span>rpm<span class="w"> </span>-E<span class="w"> </span>%fedora<span class="k">)</span>.noarch.rpm
+</pre></div>
+</div>
+<p>Update fedora</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>update
+sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>upgrade<span class="w"> </span>--refresh
+
+reboot
+</pre></div>
+</div>
+</section>
+<section id="nvidia-drivers-if-applicable">
+<h2>NVIDIA Drivers - If Applicable<a class="headerlink" href="#nvidia-drivers-if-applicable" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ensure Secure Boot is disabled before proceeding</p>
+</div>
+<p>Install Drivers</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>akmod-nvidia
+</pre></div>
+</div>
+<p>Install Additional Drivers for CUDA enabled software such as Davinci, Resolve, Blender, etc…</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>xorg-x11-drv-nvidia-cuda
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Let the kernel get built. So take about 5 minutes after it’s installed to do additional steps.</p>
+</div>
+</section>
+<section id="media-codecs">
+<h2>Media Codecs<a class="headerlink" href="#media-codecs" title="Link to this heading"></a></h2>
+<p>Install Media Codecs</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>swap<span class="w"> </span><span class="s1">&#39;ffmpeg-free&#39;</span><span class="w"> </span><span class="s1">&#39;ffmpeg&#39;</span><span class="w"> </span>--allowerasing
+
+sudo<span class="w"> </span>dnf<span class="w"> </span>update<span class="w"> </span>@multimedia<span class="w"> </span>--setopt<span class="o">=</span><span class="s2">&quot;install_weak_deps=False&quot;</span><span class="w"> </span>--exclude<span class="o">=</span>PackageKit-gstreamer-plugin
+
+sudo<span class="w"> </span>dnf<span class="w"> </span>update<span class="w"> </span>@sound-and-video
+
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>Multimedia
+</pre></div>
+</div>
+</section>
+<section id="network-manager-wait-online-service">
+<h2>Network Manager Wait Online Service<a class="headerlink" href="#network-manager-wait-online-service" title="Link to this heading"></a></h2>
+<p>Disable the <code class="docutils literal notranslate"><span class="pre">NetworkManager-wait-online.service</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>NetworkManager-wait-online.service
+</pre></div>
+</div>
+</section>
+<section id="gnome-software-startup">
+<h2>Gnome Software Startup<a class="headerlink" href="#gnome-software-startup" title="Link to this heading"></a></h2>
+<p>Disable the Gnome software from your startup apps</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>rm<span class="w"> </span>/etc/xdg/autostart/org.gnome.Software.desktop
+</pre></div>
+</div>
+</section>
+<section id="reboot">
+<h2>Reboot<a class="headerlink" href="#reboot" title="Link to this heading"></a></h2>
+<p>Top it all off with a reboot</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>reboot
+</pre></div>
+</div>
+<p>Dun</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install_fedora_40.html" class="btn btn-neutral float-left" title="Install and Setup Fedora 40 Workstation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="hardware.html" class="btn btn-neutral float-right" title="Hardware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

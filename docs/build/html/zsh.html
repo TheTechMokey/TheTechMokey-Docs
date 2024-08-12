@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installing Zsh and Oh My Zsh &mdash; The Tech Mokey 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            The Tech Mokey
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="network_infrastructure.html">Network Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_infrastructure.html">Server Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operating_systems.html">Operating Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">The Tech Mokey</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installing Zsh and Oh My Zsh</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/zsh.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installing-zsh-and-oh-my-zsh">
+<h1>Installing Zsh and Oh My Zsh<a class="headerlink" href="#installing-zsh-and-oh-my-zsh" title="Link to this heading"></a></h1>
+<p>This guide will walk you through installing Zsh, Oh My Zsh, and some useful plugins to enhance your terminal experience.</p>
+<a class="reference internal image-reference" href="_images/zsh.png"><img alt="_images/zsh.png" class="align-center" src="_images/zsh.png" style="width: 658.0px; height: 528.25px;" /></a>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Git</p></li>
+<li><p>Curl</p></li>
+</ul>
+<p>If you don’t have a preferred text editor installed, you can install one with the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">nano</span>
+</pre></div>
+</div>
+</section>
+<section id="install-zsh">
+<h2>1. Install Zsh<a class="headerlink" href="#install-zsh" title="Link to this heading"></a></h2>
+<section id="ubuntu">
+<h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Link to this heading"></a></h3>
+<p>To install Zsh on Ubuntu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">zsh</span>
+</pre></div>
+</div>
+</section>
+<section id="fedora-centos">
+<h3>Fedora/CentOS<a class="headerlink" href="#fedora-centos" title="Link to this heading"></a></h3>
+<p>To install Zsh on Fedora/CentOS:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">zsh</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="install-oh-my-zsh">
+<h2>2. Install Oh My Zsh<a class="headerlink" href="#install-oh-my-zsh" title="Link to this heading"></a></h2>
+<p>Run the following command to install Oh My Zsh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">fsSL</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">robbyrussell</span><span class="o">/</span><span class="n">oh</span><span class="o">-</span><span class="n">my</span><span class="o">-</span><span class="n">zsh</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">sh</span>
+<span class="n">zsh</span>
+</pre></div>
+</div>
+</section>
+<section id="change-default-shell">
+<h2>3. Change Default Shell<a class="headerlink" href="#change-default-shell" title="Link to this heading"></a></h2>
+<p>To change the default shell to Zsh, use the following command, replacing <code class="docutils literal notranslate"><span class="pre">&lt;USERNAME&gt;</span></code> with your actual username:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo usermod --shell $(which zsh) &lt;USERNAME&gt;
+</pre></div>
+</div>
+</section>
+<section id="add-plugins">
+<h2>4. Add Plugins<a class="headerlink" href="#add-plugins" title="Link to this heading"></a></h2>
+<p>Edit your Zsh configuration file to add plugins:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</pre></div>
+</div>
+<p>Find the line starting with <code class="docutils literal notranslate"><span class="pre">plugins=(</span></code> and update it as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Which plugins would you like to load?</span>
+<span class="c1"># Standard plugins can be found in $ZSH/plugins/</span>
+<span class="c1"># Custom plugins may be added to $ZSH_CUSTOM/plugins/</span>
+<span class="c1"># Example format: plugins=(rails git textmate ruby lighthouse)</span>
+<span class="c1"># Add wisely, as too many plugins slow down shell startup.</span>
+<span class="n">plugins</span><span class="o">=</span><span class="p">(</span>
+    <span class="n">git</span>
+    <span class="n">dnf</span>  <span class="c1"># OR apt, depending on your system</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="syntax-highlighting">
+<h2>5. Syntax Highlighting<a class="headerlink" href="#syntax-highlighting" title="Link to this heading"></a></h2>
+<p>Install the Syntax Highlighting plugin:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+</pre></div>
+</div>
+<p>Add the plugin to your <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</pre></div>
+</div>
+<p>Update the <code class="docutils literal notranslate"><span class="pre">plugins</span></code> line to include <code class="docutils literal notranslate"><span class="pre">zsh-syntax-highlighting</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plugins</span><span class="o">=</span><span class="p">(</span>
+    <span class="o">...</span>
+    <span class="n">zsh</span><span class="o">-</span><span class="n">syntax</span><span class="o">-</span><span class="n">highlighting</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="auto-suggestions">
+<h2>6. Auto Suggestions<a class="headerlink" href="#auto-suggestions" title="Link to this heading"></a></h2>
+<p>Install the Auto Suggestions plugin:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+</pre></div>
+</div>
+<p>Add the plugin to your <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</pre></div>
+</div>
+<p>Update the <code class="docutils literal notranslate"><span class="pre">plugins</span></code> line to include <code class="docutils literal notranslate"><span class="pre">zsh-autosuggestions</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plugins</span><span class="o">=</span><span class="p">(</span>
+    <span class="o">...</span>
+    <span class="n">zsh</span><span class="o">-</span><span class="n">autosuggestions</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="fuzzy-finder">
+<h2>7. Fuzzy Finder<a class="headerlink" href="#fuzzy-finder" title="Link to this heading"></a></h2>
+<p>Install Fuzzy Finder (fzf):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span> <span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">junegunn</span><span class="o">/</span><span class="n">fzf</span><span class="o">.</span><span class="n">git</span> <span class="o">~/.</span><span class="n">fzf</span>
+<span class="o">~/.</span><span class="n">fzf</span><span class="o">/</span><span class="n">install</span>
+</pre></div>
+</div>
+<p>Answer <code class="docutils literal notranslate"><span class="pre">yes</span></code> to all prompts during the installation.</p>
+</section>
+<section id="time-to-prettyfi">
+<h2>8. Time to Prettyfi<a class="headerlink" href="#time-to-prettyfi" title="Link to this heading"></a></h2>
+<section id="install-nerd-fonts">
+<h3>Install Nerd Fonts<a class="headerlink" href="#install-nerd-fonts" title="Link to this heading"></a></h3>
+<p>Create a fonts directory and download the Meslo font:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">~/.</span><span class="n">fonts</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="o">~/.</span><span class="n">fonts</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ryanoasis</span><span class="o">/</span><span class="n">nerd</span><span class="o">-</span><span class="n">fonts</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">v3</span><span class="mf">.2.1</span><span class="o">/</span><span class="n">Meslo</span><span class="o">.</span><span class="n">zip</span>
+</pre></div>
+</div>
+<p>Unzip the font files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unzip</span> <span class="n">Meslo</span><span class="o">.</span><span class="n">zip</span>
+</pre></div>
+</div>
+<p>Clean up by removing the zip file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="n">Meslo</span><span class="o">.</span><span class="n">zip</span>
+</pre></div>
+</div>
+<p>Change the font preference in your text editor to use the Meslo Nerd Font.</p>
+</section>
+<section id="install-powerlevel10k">
+<h3>Install Powerlevel10k<a class="headerlink" href="#install-powerlevel10k" title="Link to this heading"></a></h3>
+<p>Clone the Powerlevel10k theme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">romkatv</span><span class="o">/</span><span class="n">powerlevel10k</span><span class="o">.</span><span class="n">git</span> <span class="o">~/</span><span class="n">powerlevel10k</span>
+<span class="n">echo</span> <span class="s1">&#39;source ~/powerlevel10k/powerlevel10k.zsh-theme&#39;</span> <span class="o">&gt;&gt;~/.</span><span class="n">zshrc</span>
+</pre></div>
+</div>
+<p>Restart Zsh to apply the changes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exec</span> <span class="n">zsh</span>
+</pre></div>
+</div>
+<p>If this doesn’t trigger the Powerlevel10k setup, you can run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p10k</span> <span class="n">configure</span>
+</pre></div>
+</div>
+<p>To reconfigure Powerlevel10k at any time, just run the above command.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
