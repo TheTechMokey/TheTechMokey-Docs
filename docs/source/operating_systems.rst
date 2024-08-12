@@ -9,4 +9,5 @@ Fedora 40 Workstation
 
    install_fedora_40
    fedora_post-install
+   fedora_commands
 
